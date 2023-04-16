@@ -22,9 +22,28 @@ Partial Class PurchaseOrderListForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "PurchaseOrderListForm"
+        Label1 = New Label()
+        SuspendLayout()
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(284, 49)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(196, 25)
+        Label1.TabIndex = 0
+        Label1.Text = "PurchaseOrderListForm"' 
+        ' PurchaseOrderListForm
+        ' 
+        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 450)
+        Controls.Add(Label1)
+        Name = "PurchaseOrderListForm"
+        Text = "PurchaseOrderListForm"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
+
+    Friend WithEvents Label1 As Label
 End Class
