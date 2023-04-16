@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\setia\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\setia\\.nuget\\packages"
+      "C:\\Users\\ZEUS\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ZEUS\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\setia\\OneDrive\\Dokumen\\Kuliah\\S4\\Praktikum\\Visual\\PA_CKPO\\PA_CKPO\\PA_CKPO.vbproj": {}
+    "E:\\UNMUL\\vscode\\Praktimum_Pemvis_PA\\PA_CKPO\\PA_CKPO.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\setia\\OneDrive\\Dokumen\\Kuliah\\S4\\Praktikum\\Visual\\PA_CKPO\\PA_CKPO\\PA_CKPO.vbproj": {
+    "E:\\UNMUL\\vscode\\Praktimum_Pemvis_PA\\PA_CKPO\\PA_CKPO.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\setia\\OneDrive\\Dokumen\\Kuliah\\S4\\Praktikum\\Visual\\PA_CKPO\\PA_CKPO\\PA_CKPO.vbproj",
+        "projectUniqueName": "E:\\UNMUL\\vscode\\Praktimum_Pemvis_PA\\PA_CKPO\\PA_CKPO.vbproj",
         "projectName": "PA_CKPO",
-        "projectPath": "C:\\Users\\setia\\OneDrive\\Dokumen\\Kuliah\\S4\\Praktikum\\Visual\\PA_CKPO\\PA_CKPO\\PA_CKPO.vbproj",
-        "packagesPath": "C:\\Users\\setia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\setia\\OneDrive\\Dokumen\\Kuliah\\S4\\Praktikum\\Visual\\PA_CKPO\\PA_CKPO\\obj\\",
+        "projectPath": "E:\\UNMUL\\vscode\\Praktimum_Pemvis_PA\\PA_CKPO\\PA_CKPO.vbproj",
+        "packagesPath": "C:\\Users\\ZEUS\\.nuget\\packages\\",
+        "outputPath": "E:\\UNMUL\\vscode\\Praktimum_Pemvis_PA\\PA_CKPO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\setia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ZEUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
@@ -57,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
