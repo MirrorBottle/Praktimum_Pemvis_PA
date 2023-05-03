@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AdminDashboardForm
+Partial Class LogisticPODetailForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,29 +22,16 @@ Partial Class AdminDashboardForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(263, 9)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(258, 31)
-        Label1.TabIndex = 0
-        Label1.Text = "AdminDashboardForm"' 
-        ' AdminDashboardForm
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(Label1)
-        Name = "AdminDashboardForm"
-        Text = "AdminDashboardForm"
-        ResumeLayout(False)
-        PerformLayout()
-    End Sub
+        Me.SuspendLayout()
+        '
+        'LogisticPODetailForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(804, 461)
+        Me.Name = "LogisticPODetailForm"
+        Me.Text = "LogisticPODetailForm"
+        Me.ResumeLayout(False)
 
-    Friend WithEvents Label1 As Label
+    End Sub
 End Class
