@@ -4,25 +4,31 @@ Imports System.Text
 Imports MySql.Data.MySqlClient
 
 Module UserHelper
+
+    Dim filePath As String = Path.Combine(Application.StartupPath, "user_credentials.txt")
+
     Public Function Login(username As String, password As String) As Boolean
         Dim passwordHash As String = Helper.HashPassword(password)
         Dim userId As Integer = 0
+        System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance)
+
+
         Using connection As New MySqlConnection(SqlHelper.connectionString)
             connection.Open()
-            Dim query As String = "SELECT * FROM users WHERE username=@username AND password_hash=@password_hash"
+            Dim query As String = $"SELECT * FROM users WHERE username='{username}' AND password='{password}'"
             Using command As New MySqlCommand(query, connection)
-                command.Parameters.AddWithValue("@username", username)
-                command.Parameters.AddWithValue("@password_hash", passwordHash)
+
                 Using reader = command.ExecuteReader()
                     If reader.HasRows Then
-                        ' Authentication successful, write the username to a file
-                        Using writer As StreamWriter = New StreamWriter("user_credentials.txt", False)
+                        reader.Read()
+                        userId = reader.GetInt32(0)
+
+                        Using writer As StreamWriter = New StreamWriter(filePath, False)
                             writer.WriteLine(userId)
                             writer.WriteLine(username)
                         End Using
                         Return True
                     Else
-                        ' Authentication failed
                         Return False
                     End If
                 End Using
@@ -34,9 +40,8 @@ Module UserHelper
         Dim userId As Integer = 0
         Dim username As String = ""
         Dim passwordHash As String = ""
-
-        If File.Exists("user_credentials.txt") Then
-            Using reader As StreamReader = New StreamReader("user_credentials.txt")
+        If File.Exists(filePath) Then
+            Using reader As StreamReader = New StreamReader(filePath)
                 userId = Integer.Parse(reader.ReadLine())
                 username = reader.ReadLine()
                 passwordHash = Helper.HashPassword(reader.ReadLine())
@@ -49,8 +54,8 @@ Module UserHelper
     Public Function GetUsername() As String
         Dim username As String = ""
 
-        If File.Exists("user_credentials.txt") Then
-            Using reader As StreamReader = New StreamReader("user_credentials.txt")
+        If File.Exists(filePath) Then
+            Using reader As StreamReader = New StreamReader(filePath)
                 reader.ReadLine() ' Skip user ID
                 username = reader.ReadLine()
             End Using
@@ -60,8 +65,8 @@ Module UserHelper
     End Function
 
     Public Sub Logout()
-        If File.Exists("user_credentials.txt") Then
-            File.Delete("user_credentials.txt")
+        If File.Exists(filePath) Then
+            File.Delete(filePath)
         End If
     End Sub
 End Module

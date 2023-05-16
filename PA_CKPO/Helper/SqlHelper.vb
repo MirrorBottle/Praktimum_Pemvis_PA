@@ -5,6 +5,7 @@ Module SqlHelper
     Public connectionString As String = "server=localhost;database=s4_ck_po;uid=root;password=;"
 
     Public Function ExecuteQuery(query As String) As DataTable
+        System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance)
         Using conn As New MySqlConnection(connectionString)
             Using cmd As New MySqlCommand(query, conn)
                 Dim dt As New DataTable()
@@ -19,6 +20,7 @@ Module SqlHelper
     End Function
 
     Public Sub ExecuteNonQuery(query As String)
+        System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance)
         Using conn As New MySqlConnection(connectionString)
             Using cmd As New MySqlCommand(query, conn)
                 conn.Open()
