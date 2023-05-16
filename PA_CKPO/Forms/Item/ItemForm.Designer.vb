@@ -132,17 +132,17 @@ Partial Class ItemForm
         ' TxtPrice
         ' 
         TxtPrice.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtPrice.Location = New Point(151, 262)
+        TxtPrice.Location = New Point(206, 262)
         TxtPrice.Name = "TxtPrice"
-        TxtPrice.Size = New Size(283, 34)
+        TxtPrice.Size = New Size(228, 34)
         TxtPrice.TabIndex = 27
         ' 
         ' TxtName
         ' 
         TxtName.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtName.Location = New Point(193, 209)
+        TxtName.Location = New Point(151, 209)
         TxtName.Name = "TxtName"
-        TxtName.Size = New Size(241, 34)
+        TxtName.Size = New Size(283, 34)
         TxtName.TabIndex = 26
         ' 
         ' TxtCode
@@ -255,7 +255,7 @@ Partial Class ItemForm
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Roboto", 15F, FontStyle.Regular, GraphicsUnit.Point)
-        Label7.Location = New Point(151, 213)
+        Label7.Location = New Point(151, 265)
         Label7.Name = "Label7"
         Label7.Size = New Size(49, 30)
         Label7.TabIndex = 40
