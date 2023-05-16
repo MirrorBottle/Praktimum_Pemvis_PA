@@ -23,17 +23,17 @@ Partial Class UserListForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.txtCari = New System.Windows.Forms.TextBox()
+        Me.btnTambah = New FontAwesome.Sharp.IconButton()
+        Me.btnHapus = New FontAwesome.Sharp.IconButton()
+        Me.btnEdit = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.user_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.role = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.btnFilter = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,67 +49,68 @@ Partial Class UserListForm
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'TextBox1
+        'txtCari
         '
-        Me.TextBox1.Location = New System.Drawing.Point(65, 108)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(531, 23)
-        Me.TextBox1.TabIndex = 3
+        Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtCari.Location = New System.Drawing.Point(65, 108)
+        Me.txtCari.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(531, 28)
+        Me.txtCari.TabIndex = 3
         '
-        'IconButton1
+        'btnTambah
         '
-        Me.IconButton1.BackColor = System.Drawing.SystemColors.Control
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.IconButton1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 25
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(679, 104)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(83, 30)
-        Me.IconButton1.TabIndex = 4
-        Me.IconButton1.Text = "Tambah"
-        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton1.UseVisualStyleBackColor = False
+        Me.btnTambah.BackColor = System.Drawing.SystemColors.Control
+        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTambah.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnTambah.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
+        Me.btnTambah.IconColor = System.Drawing.Color.Black
+        Me.btnTambah.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnTambah.IconSize = 25
+        Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTambah.Location = New System.Drawing.Point(679, 104)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(83, 30)
+        Me.btnTambah.TabIndex = 4
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnTambah.UseVisualStyleBackColor = False
         '
-        'IconButton2
+        'btnHapus
         '
-        Me.IconButton2.BackColor = System.Drawing.SystemColors.Control
-        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.IconButton2.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 25
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(849, 104)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(73, 30)
-        Me.IconButton2.TabIndex = 5
-        Me.IconButton2.Text = "Hapus"
-        Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton2.UseVisualStyleBackColor = False
+        Me.btnHapus.BackColor = System.Drawing.SystemColors.Control
+        Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHapus.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnHapus.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
+        Me.btnHapus.IconColor = System.Drawing.Color.Black
+        Me.btnHapus.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnHapus.IconSize = 25
+        Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHapus.Location = New System.Drawing.Point(849, 104)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(73, 30)
+        Me.btnHapus.TabIndex = 5
+        Me.btnHapus.Text = "Hapus"
+        Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnHapus.UseVisualStyleBackColor = False
         '
-        'IconButton3
+        'btnEdit
         '
-        Me.IconButton3.BackColor = System.Drawing.SystemColors.Control
-        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.IconButton3.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.FileEdit
-        Me.IconButton3.IconColor = System.Drawing.Color.Black
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.IconSize = 25
-        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton3.Location = New System.Drawing.Point(771, 104)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(66, 30)
-        Me.IconButton3.TabIndex = 6
-        Me.IconButton3.Text = "Edit"
-        Me.IconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton3.UseVisualStyleBackColor = False
+        Me.btnEdit.BackColor = System.Drawing.SystemColors.Control
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEdit.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnEdit.IconChar = FontAwesome.Sharp.IconChar.FileEdit
+        Me.btnEdit.IconColor = System.Drawing.Color.Black
+        Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEdit.IconSize = 25
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEdit.Location = New System.Drawing.Point(771, 104)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(66, 30)
+        Me.btnEdit.TabIndex = 6
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEdit.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -128,7 +129,7 @@ Partial Class UserListForm
         Me.DataGridView1.Location = New System.Drawing.Point(8, 139)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(924, 249)
+        Me.DataGridView1.Size = New System.Drawing.Size(924, 359)
         Me.DataGridView1.TabIndex = 8
         '
         'id
@@ -155,36 +156,36 @@ Partial Class UserListForm
         Me.role.Name = "role"
         Me.role.Width = 200
         '
-        'IconButton4
+        'btnFilter
         '
-        Me.IconButton4.BackColor = System.Drawing.SystemColors.Control
-        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.IconButton4.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Filter
-        Me.IconButton4.IconColor = System.Drawing.Color.Black
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.IconSize = 25
-        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.Location = New System.Drawing.Point(603, 104)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(66, 30)
-        Me.IconButton4.TabIndex = 9
-        Me.IconButton4.Text = "Filter"
-        Me.IconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton4.UseVisualStyleBackColor = False
+        Me.btnFilter.BackColor = System.Drawing.SystemColors.Control
+        Me.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnFilter.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnFilter.IconChar = FontAwesome.Sharp.IconChar.Filter
+        Me.btnFilter.IconColor = System.Drawing.Color.Black
+        Me.btnFilter.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnFilter.IconSize = 25
+        Me.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFilter.Location = New System.Drawing.Point(603, 104)
+        Me.btnFilter.Name = "btnFilter"
+        Me.btnFilter.Size = New System.Drawing.Size(66, 30)
+        Me.btnFilter.TabIndex = 9
+        Me.btnFilter.Text = "Filter"
+        Me.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnFilter.UseVisualStyleBackColor = False
         '
         'UserListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(944, 501)
-        Me.Controls.Add(Me.IconButton4)
+        Me.Controls.Add(Me.btnFilter)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.IconButton3)
-        Me.Controls.Add(Me.IconButton2)
-        Me.Controls.Add(Me.IconButton1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnHapus)
+        Me.Controls.Add(Me.btnTambah)
+        Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.PictureBox1)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "UserListForm"
@@ -197,15 +198,15 @@ Partial Class UserListForm
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtCari As TextBox
+    Friend WithEvents btnTambah As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnHapus As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnEdit As FontAwesome.Sharp.IconButton
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents username As DataGridViewTextBoxColumn
     Friend WithEvents user_name As DataGridViewTextBoxColumn
     Friend WithEvents role As DataGridViewTextBoxColumn
-    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnFilter As FontAwesome.Sharp.IconButton
 End Class

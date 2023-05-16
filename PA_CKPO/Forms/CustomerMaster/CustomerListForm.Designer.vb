@@ -22,29 +22,183 @@ Partial Class CustomerListForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(291, 9)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(211, 31)
-        Label1.TabIndex = 0
-        Label1.Text = "CustomerListForm"' 
-        ' CustomerListForm
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(Label1)
-        Name = "CustomerListForm"
-        Text = "CustomerListForm"
-        ResumeLayout(False)
-        PerformLayout()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.customer_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.contact = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnEdit = New FontAwesome.Sharp.IconButton()
+        Me.btnHapus = New FontAwesome.Sharp.IconButton()
+        Me.btnTambah = New FontAwesome.Sharp.IconButton()
+        Me.txtCari = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnFilter = New FontAwesome.Sharp.IconButton()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.customer_name, Me.contact})
+        Me.DataGridView1.Location = New System.Drawing.Point(10, 134)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(924, 359)
+        Me.DataGridView1.TabIndex = 24
+        '
+        'id
+        '
+        Me.id.HeaderText = "ID"
+        Me.id.Name = "id"
+        Me.id.Width = 200
+        '
+        'customer_name
+        '
+        Me.customer_name.HeaderText = "NAMA"
+        Me.customer_name.Name = "customer_name"
+        Me.customer_name.Width = 350
+        '
+        'contact
+        '
+        Me.contact.HeaderText = "KONTAK"
+        Me.contact.Name = "contact"
+        Me.contact.Width = 350
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(10, 102)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 22)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "Cari :"
+        '
+        'btnEdit
+        '
+        Me.btnEdit.BackColor = System.Drawing.SystemColors.Control
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEdit.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnEdit.IconChar = FontAwesome.Sharp.IconChar.FileEdit
+        Me.btnEdit.IconColor = System.Drawing.Color.Black
+        Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEdit.IconSize = 25
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEdit.Location = New System.Drawing.Point(773, 99)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(66, 30)
+        Me.btnEdit.TabIndex = 22
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
+        'btnHapus
+        '
+        Me.btnHapus.BackColor = System.Drawing.SystemColors.Control
+        Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHapus.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnHapus.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
+        Me.btnHapus.IconColor = System.Drawing.Color.Black
+        Me.btnHapus.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnHapus.IconSize = 25
+        Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHapus.Location = New System.Drawing.Point(851, 99)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(73, 30)
+        Me.btnHapus.TabIndex = 21
+        Me.btnHapus.Text = "Hapus"
+        Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnHapus.UseVisualStyleBackColor = False
+        '
+        'btnTambah
+        '
+        Me.btnTambah.BackColor = System.Drawing.SystemColors.Control
+        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTambah.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnTambah.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
+        Me.btnTambah.IconColor = System.Drawing.Color.Black
+        Me.btnTambah.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnTambah.IconSize = 25
+        Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTambah.Location = New System.Drawing.Point(681, 99)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(83, 30)
+        Me.btnTambah.TabIndex = 20
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnTambah.UseVisualStyleBackColor = False
+        '
+        'txtCari
+        '
+        Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtCari.Location = New System.Drawing.Point(67, 103)
+        Me.txtCari.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(531, 28)
+        Me.txtCari.TabIndex = 19
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.PA_CKPO.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(14, 7)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(154, 74)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 18
+        Me.PictureBox1.TabStop = False
+        '
+        'btnFilter
+        '
+        Me.btnFilter.BackColor = System.Drawing.SystemColors.Control
+        Me.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnFilter.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnFilter.IconChar = FontAwesome.Sharp.IconChar.Filter
+        Me.btnFilter.IconColor = System.Drawing.Color.Black
+        Me.btnFilter.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnFilter.IconSize = 25
+        Me.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFilter.Location = New System.Drawing.Point(605, 99)
+        Me.btnFilter.Name = "btnFilter"
+        Me.btnFilter.Size = New System.Drawing.Size(66, 30)
+        Me.btnFilter.TabIndex = 25
+        Me.btnFilter.Text = "Filter"
+        Me.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnFilter.UseVisualStyleBackColor = False
+        '
+        'CustomerListForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(944, 501)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnHapus)
+        Me.Controls.Add(Me.btnTambah)
+        Me.Controls.Add(Me.txtCari)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnFilter)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Name = "CustomerListForm"
+        Me.Text = "CustomerListForm"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents customer_name As DataGridViewTextBoxColumn
+    Friend WithEvents contact As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnEdit As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnHapus As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnTambah As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtCari As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnFilter As FontAwesome.Sharp.IconButton
 End Class
