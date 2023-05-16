@@ -168,7 +168,7 @@ Partial Class UserForm
         Cmb_Hak_Akses.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
         Cmb_Hak_Akses.FormattingEnabled = True
         Cmb_Hak_Akses.Items.AddRange(New Object() {"1. Admin", "2. logistics", "3. Customer"})
-        Cmb_Hak_Akses.Location = New Point(151, 318)
+        Cmb_Hak_Akses.Location = New Point(151, 316)
         Cmb_Hak_Akses.Name = "Cmb_Hak_Akses"
         Cmb_Hak_Akses.Size = New Size(569, 35)
         Cmb_Hak_Akses.TabIndex = 14
@@ -213,6 +213,7 @@ Partial Class UserForm
         Controls.Add(Label2)
         Controls.Add(Btn_Back)
         Name = "UserForm"
+        Text = "FormUser"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
