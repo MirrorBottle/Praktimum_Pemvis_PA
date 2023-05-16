@@ -32,7 +32,7 @@ Partial Class ItemListForm
         Me.btnEdit = New FontAwesome.Sharp.IconButton()
         Me.btnHapus = New FontAwesome.Sharp.IconButton()
         Me.btnTambah = New FontAwesome.Sharp.IconButton()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCari = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnFilter = New FontAwesome.Sharp.IconButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,14 +143,14 @@ Partial Class ItemListForm
         Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnTambah.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'txtCari
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(67, 103)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(531, 28)
-        Me.TextBox1.TabIndex = 19
+        Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtCari.Location = New System.Drawing.Point(67, 103)
+        Me.txtCari.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(531, 28)
+        Me.txtCari.TabIndex = 19
         '
         'PictureBox1
         '
@@ -191,7 +191,7 @@ Partial Class ItemListForm
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnTambah)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnFilter)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -209,7 +209,7 @@ Partial Class ItemListForm
     Friend WithEvents btnEdit As FontAwesome.Sharp.IconButton
     Friend WithEvents btnHapus As FontAwesome.Sharp.IconButton
     Friend WithEvents btnTambah As FontAwesome.Sharp.IconButton
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCari As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnFilter As FontAwesome.Sharp.IconButton
     Friend WithEvents id As DataGridViewTextBoxColumn

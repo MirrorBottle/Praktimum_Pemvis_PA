@@ -57,12 +57,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\Download\mysql-connector-net-6.6.4-noinstall\v4\mysql.data.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
