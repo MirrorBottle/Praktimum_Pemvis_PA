@@ -6,9 +6,12 @@
     <StartupObject>PA_CKPO.UserDetailForm</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <ImportedNamespaces>mysql.data=False,PA_CKPO.My=False,System.Data=False,System.Drawing=False,System.Windows.Forms=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,PA_CKPO=True</ImportedNamespaces>
   </PropertyGroup>
 
   <ItemGroup>
+    <Import Include="mysql.data" />
+    <Import Include="PA_CKPO.My" />
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
@@ -25,12 +28,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="My Project\Settings.Designer.vb">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -44,7 +57,11 @@
 
   <ItemGroup>
     <Reference Include="MySql.Data">
+<<<<<<< HEAD
       <HintPath>..\..\VISUAL\mysql-connector-net-6.6.4-noinstall\v4\mysql.data.dll</HintPath>
+=======
+      <HintPath>..\..\..\ODBC\mysql-connector-net-6.6.4-noinstall\v4\mysql.data.dll</HintPath>
+>>>>>>> 4282eae6fd31ca757c84ae6311285059904b0505
     </Reference>
   </ItemGroup>
 
