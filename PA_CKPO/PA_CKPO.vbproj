@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <StartupObject>PA_CKPO.My.MyApplication</StartupObject>
+    <StartupObject>PA_CKPO.SupplierDetailForm</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <ImportedNamespaces>mysql.data=False,PA_CKPO.My=False,System.Data=False,System.Drawing=False,System.Windows.Forms=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,PA_CKPO=True</ImportedNamespaces>
@@ -54,14 +54,7 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\Download\mysql-connector-net-6.6.4-noinstall\v4\mysql.data.dll</HintPath>
-      <HintPath>..\..\VISUAL\mysql-connector-net-6.6.4-noinstall\v4\mysql.data.dll</HintPath>
-      <HintPath>..\..\..\ODBC\mysql-connector-net-6.6.4-noinstall\v4\mysql.data.dll</HintPath>
-    </Reference>
+    <PackageReference Include="MySql.Data" Version="8.0.33" />
   </ItemGroup>
 
   <ItemGroup>

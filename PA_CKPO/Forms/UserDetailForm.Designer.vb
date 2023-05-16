@@ -24,10 +24,10 @@ Partial Class UserDetailForm
     Private Sub InitializeComponent()
         Label1 = New Label()
         LabelId = New Label()
-        LabelKode = New Label()
-        LabelKontak = New Label()
-        LabelNama = New Label()
-        LabelAlamat = New Label()
+        LabelCode = New Label()
+        LabelContact = New Label()
+        LabelName = New Label()
+        LabelAddress = New Label()
         Btn_Back = New FontAwesome.Sharp.IconButton()
         Panel1 = New Panel()
         Label6 = New Label()
@@ -60,46 +60,46 @@ Partial Class UserDetailForm
         LabelId.Size = New Size(24, 27)
         LabelId.TabIndex = 2
         LabelId.Text = "2"' 
-        ' LabelKode
+        ' LabelCode
         ' 
-        LabelKode.AutoSize = True
-        LabelKode.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelKode.Location = New Point(291, 218)
-        LabelKode.Margin = New Padding(2, 0, 2, 0)
-        LabelKode.Name = "LabelKode"
-        LabelKode.Size = New Size(101, 27)
-        LabelKode.TabIndex = 4
-        LabelKode.Text = "Kode xxx"' 
-        ' LabelKontak
+        LabelCode.AutoSize = True
+        LabelCode.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
+        LabelCode.Location = New Point(291, 218)
+        LabelCode.Margin = New Padding(2, 0, 2, 0)
+        LabelCode.Name = "LabelCode"
+        LabelCode.Size = New Size(101, 27)
+        LabelCode.TabIndex = 4
+        LabelCode.Text = "Kode xxx"' 
+        ' LabelContact
         ' 
-        LabelKontak.AutoSize = True
-        LabelKontak.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelKontak.Location = New Point(291, 322)
-        LabelKontak.Margin = New Padding(2, 0, 2, 0)
-        LabelKontak.Name = "LabelKontak"
-        LabelKontak.Size = New Size(119, 27)
-        LabelKontak.TabIndex = 8
-        LabelKontak.Text = "Kontak xxx"' 
-        ' LabelNama
+        LabelContact.AutoSize = True
+        LabelContact.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
+        LabelContact.Location = New Point(291, 322)
+        LabelContact.Margin = New Padding(2, 0, 2, 0)
+        LabelContact.Name = "LabelContact"
+        LabelContact.Size = New Size(119, 27)
+        LabelContact.TabIndex = 8
+        LabelContact.Text = "Kontak xxx"' 
+        ' LabelName
         ' 
-        LabelNama.AutoSize = True
-        LabelNama.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelNama.Location = New Point(291, 270)
-        LabelNama.Margin = New Padding(2, 0, 2, 0)
-        LabelNama.Name = "LabelNama"
-        LabelNama.Size = New Size(109, 27)
-        LabelNama.TabIndex = 6
-        LabelNama.Text = "Nama xxx"' 
-        ' LabelAlamat
+        LabelName.AutoSize = True
+        LabelName.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
+        LabelName.Location = New Point(291, 270)
+        LabelName.Margin = New Padding(2, 0, 2, 0)
+        LabelName.Name = "LabelName"
+        LabelName.Size = New Size(109, 27)
+        LabelName.TabIndex = 6
+        LabelName.Text = "Nama xxx"' 
+        ' LabelAddress
         ' 
-        LabelAlamat.AutoSize = True
-        LabelAlamat.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelAlamat.Location = New Point(291, 373)
-        LabelAlamat.Margin = New Padding(2, 0, 2, 0)
-        LabelAlamat.Name = "LabelAlamat"
-        LabelAlamat.Size = New Size(119, 27)
-        LabelAlamat.TabIndex = 10
-        LabelAlamat.Text = "Alamat xxx"' 
+        LabelAddress.AutoSize = True
+        LabelAddress.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
+        LabelAddress.Location = New Point(291, 373)
+        LabelAddress.Margin = New Padding(2, 0, 2, 0)
+        LabelAddress.Name = "LabelAddress"
+        LabelAddress.Size = New Size(119, 27)
+        LabelAddress.TabIndex = 10
+        LabelAddress.Text = "Alamat xxx"' 
         ' Btn_Back
         ' 
         Btn_Back.IconChar = FontAwesome.Sharp.IconChar.LeftLong
@@ -178,7 +178,7 @@ Partial Class UserDetailForm
         Label2.Text = "ID"' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.logo
+        PictureBox1.Image = Resources.Resources.logo
         PictureBox1.Location = New Point(34, 12)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(154, 74)
@@ -194,10 +194,10 @@ Partial Class UserDetailForm
         Controls.Add(PictureBox1)
         Controls.Add(Panel1)
         Controls.Add(Btn_Back)
-        Controls.Add(LabelAlamat)
-        Controls.Add(LabelKontak)
-        Controls.Add(LabelNama)
-        Controls.Add(LabelKode)
+        Controls.Add(LabelAddress)
+        Controls.Add(LabelContact)
+        Controls.Add(LabelName)
+        Controls.Add(LabelCode)
         Controls.Add(LabelId)
         Controls.Add(Label1)
         Margin = New Padding(2)
@@ -212,10 +212,10 @@ Partial Class UserDetailForm
 
     Friend WithEvents Label1 As Label
     Friend WithEvents LabelId As Label
-    Friend WithEvents LabelKode As Label
-    Friend WithEvents LabelKontak As Label
-    Friend WithEvents LabelNama As Label
-    Friend WithEvents LabelAlamat As Label
+    Friend WithEvents LabelCode As Label
+    Friend WithEvents LabelContact As Label
+    Friend WithEvents LabelName As Label
+    Friend WithEvents LabelAddress As Label
     Friend WithEvents Btn_Back As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label6 As Label
