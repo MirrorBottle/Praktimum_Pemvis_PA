@@ -28,13 +28,13 @@ Partial Class UserForm
         Label3 = New Label()
         Label4 = New Label()
         Label5 = New Label()
-        TB_username = New TextBox()
-        TB_Name = New TextBox()
-        TB_Password = New TextBox()
+        TxtUsername = New TextBox()
+        TxtName = New TextBox()
+        TxtPassword = New TextBox()
         Label6 = New Label()
         IconButton1 = New FontAwesome.Sharp.IconButton()
         IconButton2 = New FontAwesome.Sharp.IconButton()
-        Cmb_Hak_Akses = New ComboBox()
+        CmbHakAkses = New ComboBox()
         Cmb_Cutomer = New ComboBox()
         PictureBox1 = New PictureBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -97,30 +97,30 @@ Partial Class UserForm
         Label5.Size = New Size(113, 28)
         Label5.TabIndex = 5
         Label5.Text = "Customer"' 
-        ' TB_username
+        ' TxtUsername
         ' 
-        TB_username.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TB_username.Location = New Point(151, 159)
-        TB_username.Name = "TB_username"
-        TB_username.Size = New Size(569, 34)
-        TB_username.TabIndex = 6
+        TxtUsername.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
+        TxtUsername.Location = New Point(151, 159)
+        TxtUsername.Name = "TxtUsername"
+        TxtUsername.Size = New Size(569, 34)
+        TxtUsername.TabIndex = 6
         ' 
-        ' TB_Name
+        ' TxtName
         ' 
-        TB_Name.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TB_Name.Location = New Point(151, 212)
-        TB_Name.Name = "TB_Name"
-        TB_Name.Size = New Size(569, 34)
-        TB_Name.TabIndex = 7
+        TxtName.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
+        TxtName.Location = New Point(151, 212)
+        TxtName.Name = "TxtName"
+        TxtName.Size = New Size(569, 34)
+        TxtName.TabIndex = 7
         ' 
-        ' TB_Password
+        ' TxtPassword
         ' 
-        TB_Password.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TB_Password.Location = New Point(151, 265)
-        TB_Password.Name = "TB_Password"
-        TB_Password.PasswordChar = "*"c
-        TB_Password.Size = New Size(569, 34)
-        TB_Password.TabIndex = 8
+        TxtPassword.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
+        TxtPassword.Location = New Point(151, 265)
+        TxtPassword.Name = "TxtPassword"
+        TxtPassword.PasswordChar = "*"c
+        TxtPassword.Size = New Size(569, 34)
+        TxtPassword.TabIndex = 8
         ' 
         ' Label6
         ' 
@@ -163,15 +163,15 @@ Partial Class UserForm
         IconButton2.TextAlign = ContentAlignment.MiddleRight
         IconButton2.UseVisualStyleBackColor = False
         ' 
-        ' Cmb_Hak_Akses
+        ' CmbHakAkses
         ' 
-        Cmb_Hak_Akses.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Cmb_Hak_Akses.FormattingEnabled = True
-        Cmb_Hak_Akses.Items.AddRange(New Object() {"1. Admin", "2. logistics", "3. Customer"})
-        Cmb_Hak_Akses.Location = New Point(151, 316)
-        Cmb_Hak_Akses.Name = "Cmb_Hak_Akses"
-        Cmb_Hak_Akses.Size = New Size(569, 35)
-        Cmb_Hak_Akses.TabIndex = 14
+        CmbHakAkses.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
+        CmbHakAkses.FormattingEnabled = True
+        CmbHakAkses.Items.AddRange(New Object() {"1. Admin", "2. logistics", "3. Customer"})
+        CmbHakAkses.Location = New Point(151, 316)
+        CmbHakAkses.Name = "CmbHakAkses"
+        CmbHakAkses.Size = New Size(569, 35)
+        CmbHakAkses.TabIndex = 14
         ' 
         ' Cmb_Cutomer
         ' 
@@ -199,13 +199,13 @@ Partial Class UserForm
         ClientSize = New Size(732, 493)
         Controls.Add(PictureBox1)
         Controls.Add(Cmb_Cutomer)
-        Controls.Add(Cmb_Hak_Akses)
+        Controls.Add(CmbHakAkses)
         Controls.Add(IconButton2)
         Controls.Add(IconButton1)
         Controls.Add(Label6)
-        Controls.Add(TB_Password)
-        Controls.Add(TB_Name)
-        Controls.Add(TB_username)
+        Controls.Add(TxtPassword)
+        Controls.Add(TxtName)
+        Controls.Add(TxtUsername)
         Controls.Add(Label5)
         Controls.Add(Label1)
         Controls.Add(Label4)
@@ -213,7 +213,7 @@ Partial Class UserForm
         Controls.Add(Label2)
         Controls.Add(Btn_Back)
         Name = "UserForm"
-        Text = "FormUser"
+        Text = "UserForm"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -225,13 +225,13 @@ Partial Class UserForm
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TB_username As TextBox
-    Friend WithEvents TB_Name As TextBox
-    Friend WithEvents TB_Password As TextBox
+    Friend WithEvents TxtUsername As TextBox
+    Friend WithEvents TxtName As TextBox
+    Friend WithEvents TxtPassword As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
-    Friend WithEvents Cmb_Hak_Akses As ComboBox
+    Friend WithEvents CmbHakAkses As ComboBox
     Friend WithEvents Cmb_Cutomer As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
 End Class
