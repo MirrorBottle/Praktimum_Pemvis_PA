@@ -24,6 +24,12 @@ Namespace My
     ' End Sub
 
     Partial Friend Class MyApplication
-
+        Private Sub MyApplication_Startup(sender As Object, e As StartupEventArgs) Handles Me.Startup
+            If UserHelper.IsLogin() Then
+                ' If login is successful, show the main form
+                Dim mainForm As New AdminDashboardForm()
+                mainForm.ShowDialog()
+            End If
+        End Sub
     End Class
 End Namespace

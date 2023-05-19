@@ -1,0 +1,3 @@
+﻿Module QueryHelper
+
+End Module

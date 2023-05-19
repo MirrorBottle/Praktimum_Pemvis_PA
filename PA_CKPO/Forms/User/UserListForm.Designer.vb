@@ -34,6 +34,7 @@ Partial Class UserListForm
         Me.user_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.role = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnFilter = New FontAwesome.Sharp.IconButton()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -41,10 +42,10 @@ Partial Class UserListForm
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.PA_CKPO.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(931, 13)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(154, 74)
+        Me.PictureBox1.Size = New System.Drawing.Size(134, 43)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -52,10 +53,10 @@ Partial Class UserListForm
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCari.Location = New System.Drawing.Point(65, 108)
-        Me.txtCari.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtCari.Location = New System.Drawing.Point(74, 144)
+        Me.txtCari.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtCari.Name = "txtCari"
-        Me.txtCari.Size = New System.Drawing.Size(531, 28)
+        Me.txtCari.Size = New System.Drawing.Size(606, 34)
         Me.txtCari.TabIndex = 3
         '
         'btnTambah
@@ -68,9 +69,10 @@ Partial Class UserListForm
         Me.btnTambah.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnTambah.IconSize = 25
         Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTambah.Location = New System.Drawing.Point(679, 104)
+        Me.btnTambah.Location = New System.Drawing.Point(784, 139)
+        Me.btnTambah.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(83, 30)
+        Me.btnTambah.Size = New System.Drawing.Size(102, 40)
         Me.btnTambah.TabIndex = 4
         Me.btnTambah.Text = "Tambah"
         Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -86,9 +88,10 @@ Partial Class UserListForm
         Me.btnHapus.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnHapus.IconSize = 25
         Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHapus.Location = New System.Drawing.Point(849, 104)
+        Me.btnHapus.Location = New System.Drawing.Point(976, 139)
+        Me.btnHapus.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Size = New System.Drawing.Size(73, 30)
+        Me.btnHapus.Size = New System.Drawing.Size(89, 40)
         Me.btnHapus.TabIndex = 5
         Me.btnHapus.Text = "Hapus"
         Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -104,9 +107,10 @@ Partial Class UserListForm
         Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnEdit.IconSize = 25
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEdit.Location = New System.Drawing.Point(771, 104)
+        Me.btnEdit.Location = New System.Drawing.Point(892, 139)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(66, 30)
+        Me.btnEdit.Size = New System.Drawing.Size(78, 40)
         Me.btnEdit.TabIndex = 6
         Me.btnEdit.Text = "Edit"
         Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -116,9 +120,9 @@ Partial Class UserListForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(8, 107)
+        Me.Label1.Location = New System.Drawing.Point(9, 143)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 22)
+        Me.Label1.Size = New System.Drawing.Size(60, 27)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Cari :"
         '
@@ -126,33 +130,39 @@ Partial Class UserListForm
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.username, Me.user_name, Me.role})
-        Me.DataGridView1.Location = New System.Drawing.Point(8, 139)
+        Me.DataGridView1.Location = New System.Drawing.Point(9, 185)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(924, 359)
+        Me.DataGridView1.Size = New System.Drawing.Size(1056, 479)
         Me.DataGridView1.TabIndex = 8
         '
         'id
         '
         Me.id.HeaderText = "ID"
+        Me.id.MinimumWidth = 6
         Me.id.Name = "id"
         Me.id.Width = 150
         '
         'username
         '
         Me.username.HeaderText = "Nama Pengguna"
+        Me.username.MinimumWidth = 6
         Me.username.Name = "username"
         Me.username.Width = 250
         '
         'user_name
         '
         Me.user_name.HeaderText = "Nama"
+        Me.user_name.MinimumWidth = 6
         Me.user_name.Name = "user_name"
         Me.user_name.Width = 300
         '
         'role
         '
         Me.role.HeaderText = "Hak Akses"
+        Me.role.MinimumWidth = 6
         Me.role.Name = "role"
         Me.role.Width = 200
         '
@@ -166,19 +176,29 @@ Partial Class UserListForm
         Me.btnFilter.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnFilter.IconSize = 25
         Me.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFilter.Location = New System.Drawing.Point(603, 104)
+        Me.btnFilter.Location = New System.Drawing.Point(689, 139)
+        Me.btnFilter.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnFilter.Name = "btnFilter"
-        Me.btnFilter.Size = New System.Drawing.Size(66, 30)
+        Me.btnFilter.Size = New System.Drawing.Size(89, 40)
         Me.btnFilter.TabIndex = 9
         Me.btnFilter.Text = "Filter"
         Me.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnFilter.UseVisualStyleBackColor = False
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1079, 28)
+        Me.MenuStrip1.TabIndex = 10
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
         'UserListForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(944, 501)
+        Me.ClientSize = New System.Drawing.Size(1079, 668)
         Me.Controls.Add(Me.btnFilter)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
@@ -187,7 +207,9 @@ Partial Class UserListForm
         Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "UserListForm"
         Me.Text = "UserListForm"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -209,4 +231,5 @@ Partial Class UserListForm
     Friend WithEvents user_name As DataGridViewTextBoxColumn
     Friend WithEvents role As DataGridViewTextBoxColumn
     Friend WithEvents btnFilter As FontAwesome.Sharp.IconButton
+    Friend WithEvents MenuStrip1 As MenuStrip
 End Class
