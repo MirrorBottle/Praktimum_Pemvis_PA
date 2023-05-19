@@ -78,12 +78,21 @@ Public Class NavbarControl
 
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
         Dim currentForm As Form = Me.FindForm()
+
         Select Case e.ClickedItem.Name
             Case "AdminDashboard"
                 AdminDashboardForm.Show()
             Case "UserList"
                 UserListForm.Show()
-            Case Else
+            Case "Logout"
+                Dim result As DialogResult = MessageBox.Show("Do you want to quit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If result = DialogResult.Yes Then
+                    UserHelper.Logout()
+                    Dim LoginForm = New Login()
+                    currentForm.Hide()
+                    LoginForm.ShowDialog()
+                    currentForm.Close()
+                End If
         End Select
     End Sub
 
@@ -91,6 +100,7 @@ Public Class NavbarControl
         Dim clickedItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
         Dim itemName As String = clickedItem.Name
         Dim currentForm As Form = Me.FindForm()
+
         ' Perform actions based on the clicked item name
         Select Case itemName
             Case "UserList"

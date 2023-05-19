@@ -31,5 +31,18 @@ Namespace My
                 mainForm.ShowDialog()
             End If
         End Sub
+
+        Private Sub MyApplication_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.Shutdown
+            ' Check if the closing form is the main form
+            If MainForm IsNot Nothing AndAlso MainForm.Visible Then
+                ' Display a confirmation prompt when closing the main form
+                Dim result As DialogResult = MessageBox.Show("Do you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                ' If the user chooses not to close the form, cancel the shutdown event
+                If result = DialogResult.No Then
+                    e.Cancel = True
+                End If
+            End If
+        End Sub
     End Class
 End Namespace

@@ -32,14 +32,16 @@ Partial Class UserListForm
         Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.user_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.role = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnFilter = New FontAwesome.Sharp.IconButton()
+        Me.btnRefresh = New FontAwesome.Sharp.IconButton()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.NavbarControl1 = New PA_CKPO.NavbarControl()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCari.Location = New System.Drawing.Point(74, 144)
+        Me.txtCari.Location = New System.Drawing.Point(77, 101)
         Me.txtCari.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(606, 34)
@@ -55,7 +57,7 @@ Partial Class UserListForm
         Me.btnTambah.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnTambah.IconSize = 25
         Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTambah.Location = New System.Drawing.Point(784, 139)
+        Me.btnTambah.Location = New System.Drawing.Point(787, 96)
         Me.btnTambah.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(102, 40)
@@ -74,10 +76,11 @@ Partial Class UserListForm
         Me.btnHapus.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnHapus.IconSize = 25
         Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHapus.Location = New System.Drawing.Point(976, 139)
+        Me.btnHapus.Location = New System.Drawing.Point(982, 96)
         Me.btnHapus.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Size = New System.Drawing.Size(89, 40)
+        Me.btnHapus.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btnHapus.Size = New System.Drawing.Size(101, 40)
         Me.btnHapus.TabIndex = 5
         Me.btnHapus.Text = "Hapus"
         Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -93,10 +96,11 @@ Partial Class UserListForm
         Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnEdit.IconSize = 25
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEdit.Location = New System.Drawing.Point(892, 139)
+        Me.btnEdit.Location = New System.Drawing.Point(895, 96)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(78, 40)
+        Me.btnEdit.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btnEdit.Size = New System.Drawing.Size(81, 40)
         Me.btnEdit.TabIndex = 6
         Me.btnEdit.Text = "Edit"
         Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -106,7 +110,7 @@ Partial Class UserListForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(9, 143)
+        Me.Label1.Location = New System.Drawing.Point(12, 100)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 27)
         Me.Label1.TabIndex = 7
@@ -116,12 +120,12 @@ Partial Class UserListForm
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.username, Me.user_name, Me.role})
-        Me.DataGridView1.Location = New System.Drawing.Point(9, 185)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 142)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(1056, 479)
+        Me.DataGridView1.Size = New System.Drawing.Size(1071, 479)
         Me.DataGridView1.TabIndex = 8
         '
         'id
@@ -152,31 +156,50 @@ Partial Class UserListForm
         Me.role.Name = "role"
         Me.role.Width = 200
         '
-        'btnFilter
+        'btnRefresh
         '
-        Me.btnFilter.BackColor = System.Drawing.SystemColors.Control
-        Me.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnFilter.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnFilter.IconChar = FontAwesome.Sharp.IconChar.Filter
-        Me.btnFilter.IconColor = System.Drawing.Color.Black
-        Me.btnFilter.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnFilter.IconSize = 25
-        Me.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFilter.Location = New System.Drawing.Point(689, 139)
-        Me.btnFilter.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnFilter.Name = "btnFilter"
-        Me.btnFilter.Size = New System.Drawing.Size(89, 40)
-        Me.btnFilter.TabIndex = 9
-        Me.btnFilter.Text = "Filter"
-        Me.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnFilter.UseVisualStyleBackColor = False
+        Me.btnRefresh.BackColor = System.Drawing.SystemColors.Control
+        Me.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRefresh.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnRefresh.IconChar = FontAwesome.Sharp.IconChar.Repeat
+        Me.btnRefresh.IconColor = System.Drawing.Color.Black
+        Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnRefresh.IconSize = 25
+        Me.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRefresh.Location = New System.Drawing.Point(692, 96)
+        Me.btnRefresh.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(89, 40)
+        Me.btnRefresh.TabIndex = 9
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnRefresh.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(12, 51)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(303, 35)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Manajamen Pengguna"
+        '
+        'NavbarControl1
+        '
+        Me.NavbarControl1.Location = New System.Drawing.Point(0, 0)
+        Me.NavbarControl1.Name = "NavbarControl1"
+        Me.NavbarControl1.Size = New System.Drawing.Size(1375, 50)
+        Me.NavbarControl1.TabIndex = 11
         '
         'UserListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1082, 668)
-        Me.Controls.Add(Me.btnFilter)
+        Me.ClientSize = New System.Drawing.Size(1092, 636)
+        Me.Controls.Add(Me.NavbarControl1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnEdit)
@@ -201,5 +224,7 @@ Partial Class UserListForm
     Friend WithEvents username As DataGridViewTextBoxColumn
     Friend WithEvents user_name As DataGridViewTextBoxColumn
     Friend WithEvents role As DataGridViewTextBoxColumn
-    Friend WithEvents btnFilter As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnRefresh As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label2 As Label
+    Friend WithEvents NavbarControl1 As NavbarControl
 End Class

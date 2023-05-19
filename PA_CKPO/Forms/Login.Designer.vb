@@ -85,29 +85,29 @@ Partial Class Login
         '
         Me.TxtUsername.BackColor = System.Drawing.SystemColors.Control
         Me.TxtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtUsername.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtUsername.Font = New System.Drawing.Font("Roboto", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TxtUsername.Location = New System.Drawing.Point(57, 204)
         Me.TxtUsername.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TxtUsername.Name = "TxtUsername"
-        Me.TxtUsername.Size = New System.Drawing.Size(380, 34)
+        Me.TxtUsername.Size = New System.Drawing.Size(380, 28)
         Me.TxtUsername.TabIndex = 5
         '
         'TxtPassword
         '
         Me.TxtPassword.BackColor = System.Drawing.SystemColors.Control
         Me.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtPassword.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtPassword.Font = New System.Drawing.Font("Roboto", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TxtPassword.Location = New System.Drawing.Point(57, 310)
         Me.TxtPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPassword.Size = New System.Drawing.Size(380, 34)
+        Me.TxtPassword.Size = New System.Drawing.Size(380, 28)
         Me.TxtPassword.TabIndex = 6
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(496, 512)
         Me.Controls.Add(Me.TxtPassword)
