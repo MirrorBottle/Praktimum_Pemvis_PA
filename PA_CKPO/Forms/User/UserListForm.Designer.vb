@@ -196,7 +196,7 @@ Partial Class UserListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1092, 636)
+        Me.ClientSize = New System.Drawing.Size(1092, 643)
         Me.Controls.Add(Me.NavbarControl1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnRefresh)

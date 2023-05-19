@@ -82,8 +82,28 @@ Public Class NavbarControl
         Select Case e.ClickedItem.Name
             Case "AdminDashboard"
                 AdminDashboardForm.Show()
-            Case "UserList"
-                UserListForm.Show()
+                AdminDashboardForm.Activate()
+            Case "AdminCreatePO"
+                PurchaseOrderAdminForm.Show()
+                PurchaseOrderAdminForm.Activate()
+            Case "LogisticDashboard"
+                LogisticDashboardForm.Show()
+                LogisticDashboardForm.Activate()
+            Case "LogisticPurchaseOrder"
+                PurchaseOrderListForm.Show()
+                PurchaseOrderListForm.Activate()
+            Case "LogisticItem"
+                ItemListForm.Show()
+                ItemListForm.Activate()
+            Case "CustomerDashboard"
+                CustomerDashboardForm.Show()
+                CustomerDashboardForm.Activate()
+            Case "CustomerPurchaseOrder"
+                PurchaseOrderListForm.Show()
+                PurchaseOrderListForm.Activate()
+            Case "CustomerItem"
+                ItemListForm.Show()
+                ItemListForm.Activate()
             Case "Logout"
                 Dim result As DialogResult = MessageBox.Show("Do you want to quit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then
@@ -103,9 +123,30 @@ Public Class NavbarControl
 
         ' Perform actions based on the clicked item name
         Select Case itemName
+            Case "PurchaseOrderListAdminValidation"
+                PurchaseOrderListForm.Show()
+                PurchaseOrderListForm.Activate()
+            Case "PurchaseOrderListLogisticValidation"
+                PurchaseOrderListForm.Show()
+                PurchaseOrderListForm.Activate()
+            Case "PurchaseOrderListPayment"
+                PurchaseOrderListForm.Show()
+                PurchaseOrderListForm.Activate()
+            Case "PurchaseOrderList"
+                PurchaseOrderListForm.Show()
+                PurchaseOrderListForm.Activate()
+            Case "ItemList"
+                ItemListForm.Show()
+                ItemListForm.Activate()
+            Case "SupplierList"
+                SupplierListForm.Show()
+                SupplierListForm.Activate()
+            Case "CustomerList"
+                CustomerListForm.Show()
+                CustomerListForm.Activate()
             Case "UserList"
                 UserListForm.Show()
-            Case "SubMenu1"
+                UserListForm.Activate()
         End Select
     End Sub
 End Class
