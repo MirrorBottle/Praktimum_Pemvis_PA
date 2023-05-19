@@ -22,7 +22,6 @@ Partial Class UserListForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.btnTambah = New FontAwesome.Sharp.IconButton()
         Me.btnHapus = New FontAwesome.Sharp.IconButton()
@@ -34,21 +33,8 @@ Partial Class UserListForm
         Me.user_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.role = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnFilter = New FontAwesome.Sharp.IconButton()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.PA_CKPO.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(931, 13)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(134, 43)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'txtCari
         '
@@ -185,20 +171,11 @@ Partial Class UserListForm
         Me.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnFilter.UseVisualStyleBackColor = False
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1079, 28)
-        Me.MenuStrip1.TabIndex = 10
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
         'UserListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1079, 668)
+        Me.ClientSize = New System.Drawing.Size(1082, 668)
         Me.Controls.Add(Me.btnFilter)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
@@ -206,20 +183,14 @@ Partial Class UserListForm
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.txtCari)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "UserListForm"
         Me.Text = "UserListForm"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents txtCari As TextBox
     Friend WithEvents btnTambah As FontAwesome.Sharp.IconButton
     Friend WithEvents btnHapus As FontAwesome.Sharp.IconButton
@@ -231,5 +202,4 @@ Partial Class UserListForm
     Friend WithEvents user_name As DataGridViewTextBoxColumn
     Friend WithEvents role As DataGridViewTextBoxColumn
     Friend WithEvents btnFilter As FontAwesome.Sharp.IconButton
-    Friend WithEvents MenuStrip1 As MenuStrip
 End Class
