@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UserDetailForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,194 +20,200 @@ Partial Class UserDetailForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        LabelId = New Label()
-        LabelCode = New Label()
-        LabelContact = New Label()
-        LabelName = New Label()
-        LabelAddress = New Label()
-        Btn_Back = New FontAwesome.Sharp.IconButton()
-        Panel1 = New Panel()
-        Label6 = New Label()
-        Label7 = New Label()
-        Label4 = New Label()
-        Label3 = New Label()
-        Label2 = New Label()
-        PictureBox1 = New PictureBox()
-        Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Roboto", 17F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(34, 109)
-        Label1.Margin = New Padding(2, 0, 2, 0)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(232, 35)
-        Label1.TabIndex = 0
-        Label1.Text = "Detail Pengguna"' 
-        ' LabelId
-        ' 
-        LabelId.AutoSize = True
-        LabelId.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelId.Location = New Point(291, 166)
-        LabelId.Margin = New Padding(2, 0, 2, 0)
-        LabelId.Name = "LabelId"
-        LabelId.Size = New Size(24, 27)
-        LabelId.TabIndex = 2
-        LabelId.Text = "2"' 
-        ' LabelCode
-        ' 
-        LabelCode.AutoSize = True
-        LabelCode.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelCode.Location = New Point(291, 218)
-        LabelCode.Margin = New Padding(2, 0, 2, 0)
-        LabelCode.Name = "LabelCode"
-        LabelCode.Size = New Size(101, 27)
-        LabelCode.TabIndex = 4
-        LabelCode.Text = "Kode xxx"' 
-        ' LabelContact
-        ' 
-        LabelContact.AutoSize = True
-        LabelContact.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelContact.Location = New Point(291, 322)
-        LabelContact.Margin = New Padding(2, 0, 2, 0)
-        LabelContact.Name = "LabelContact"
-        LabelContact.Size = New Size(119, 27)
-        LabelContact.TabIndex = 8
-        LabelContact.Text = "Kontak xxx"' 
-        ' LabelName
-        ' 
-        LabelName.AutoSize = True
-        LabelName.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelName.Location = New Point(291, 270)
-        LabelName.Margin = New Padding(2, 0, 2, 0)
-        LabelName.Name = "LabelName"
-        LabelName.Size = New Size(109, 27)
-        LabelName.TabIndex = 6
-        LabelName.Text = "Nama xxx"' 
-        ' LabelAddress
-        ' 
-        LabelAddress.AutoSize = True
-        LabelAddress.Font = New Font("Roboto", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        LabelAddress.Location = New Point(291, 373)
-        LabelAddress.Margin = New Padding(2, 0, 2, 0)
-        LabelAddress.Name = "LabelAddress"
-        LabelAddress.Size = New Size(119, 27)
-        LabelAddress.TabIndex = 10
-        LabelAddress.Text = "Alamat xxx"' 
-        ' Btn_Back
-        ' 
-        Btn_Back.IconChar = FontAwesome.Sharp.IconChar.LeftLong
-        Btn_Back.IconColor = Color.Black
-        Btn_Back.IconFont = FontAwesome.Sharp.IconFont.Auto
-        Btn_Back.IconSize = 40
-        Btn_Back.Location = New Point(601, 87)
-        Btn_Back.Name = "Btn_Back"
-        Btn_Back.Size = New Size(119, 42)
-        Btn_Back.TabIndex = 11
-        Btn_Back.UseVisualStyleBackColor = True
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = SystemColors.ControlDark
-        Panel1.Controls.Add(Label6)
-        Panel1.Controls.Add(Label7)
-        Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(Label2)
-        Panel1.Location = New Point(40, 158)
-        Panel1.Margin = New Padding(2)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(198, 259)
-        Panel1.TabIndex = 13
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Roboto", 13F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.Location = New Point(20, 215)
-        Label6.Margin = New Padding(2, 0, 2, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(101, 27)
-        Label6.TabIndex = 4
-        Label6.Text = "ALAMAT"' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Roboto", 13F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.Location = New Point(20, 164)
-        Label7.Margin = New Padding(2, 0, 2, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(99, 27)
-        Label7.TabIndex = 3
-        Label7.Text = "KONTAK"' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Roboto", 13F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(20, 113)
-        Label4.Margin = New Padding(2, 0, 2, 0)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(77, 27)
-        Label4.TabIndex = 2
-        Label4.Text = "NAMA"' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Roboto", 13F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(20, 61)
-        Label3.Margin = New Padding(2, 0, 2, 0)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(67, 27)
-        Label3.TabIndex = 1
-        Label3.Text = "KODE"' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Roboto", 13F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(20, 9)
-        Label2.Margin = New Padding(2, 0, 2, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(32, 27)
-        Label2.TabIndex = 0
-        Label2.Text = "ID"' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = Resources.Resources.logo
-        PictureBox1.Location = New Point(34, 12)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(154, 74)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 14
-        PictureBox1.TabStop = False
-        ' 
-        ' UserDetailForm
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(732, 493)
-        Controls.Add(PictureBox1)
-        Controls.Add(Panel1)
-        Controls.Add(Btn_Back)
-        Controls.Add(LabelAddress)
-        Controls.Add(LabelContact)
-        Controls.Add(LabelName)
-        Controls.Add(LabelCode)
-        Controls.Add(LabelId)
-        Controls.Add(Label1)
-        Margin = New Padding(2)
-        Name = "UserDetailForm"
-        Text = "UserDetailForm"
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LabelId = New System.Windows.Forms.Label()
+        Me.LabelCode = New System.Windows.Forms.Label()
+        Me.LabelContact = New System.Windows.Forms.Label()
+        Me.LabelName = New System.Windows.Forms.Label()
+        Me.LabelAddress = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 17.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(10, 14)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(181, 28)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Detail Pengguna"
+        '
+        'LabelId
+        '
+        Me.LabelId.AutoSize = True
+        Me.LabelId.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LabelId.Location = New System.Drawing.Point(12, 4)
+        Me.LabelId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelId.Name = "LabelId"
+        Me.LabelId.Size = New System.Drawing.Size(20, 22)
+        Me.LabelId.TabIndex = 2
+        Me.LabelId.Text = "2"
+        '
+        'LabelCode
+        '
+        Me.LabelCode.AutoSize = True
+        Me.LabelCode.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LabelCode.Location = New System.Drawing.Point(12, 44)
+        Me.LabelCode.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelCode.Name = "LabelCode"
+        Me.LabelCode.Size = New System.Drawing.Size(82, 22)
+        Me.LabelCode.TabIndex = 4
+        Me.LabelCode.Text = "Kode xxx"
+        '
+        'LabelContact
+        '
+        Me.LabelContact.AutoSize = True
+        Me.LabelContact.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LabelContact.Location = New System.Drawing.Point(12, 122)
+        Me.LabelContact.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelContact.Name = "LabelContact"
+        Me.LabelContact.Size = New System.Drawing.Size(97, 22)
+        Me.LabelContact.TabIndex = 8
+        Me.LabelContact.Text = "Kontak xxx"
+        '
+        'LabelName
+        '
+        Me.LabelName.AutoSize = True
+        Me.LabelName.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LabelName.Location = New System.Drawing.Point(12, 82)
+        Me.LabelName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelName.Name = "LabelName"
+        Me.LabelName.Size = New System.Drawing.Size(90, 22)
+        Me.LabelName.TabIndex = 6
+        Me.LabelName.Text = "Nama xxx"
+        '
+        'LabelAddress
+        '
+        Me.LabelAddress.AutoSize = True
+        Me.LabelAddress.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LabelAddress.Location = New System.Drawing.Point(12, 160)
+        Me.LabelAddress.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelAddress.Name = "LabelAddress"
+        Me.LabelAddress.Size = New System.Drawing.Size(99, 22)
+        Me.LabelAddress.TabIndex = 10
+        Me.LabelAddress.Text = "Alamat xxx"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Silver
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Location = New System.Drawing.Point(15, 50)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(173, 194)
+        Me.Panel1.TabIndex = 13
+        '
+        'Panel3
+        '
+        Me.Panel3.Location = New System.Drawing.Point(177, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(125, 43)
+        Me.Panel3.TabIndex = 6
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Location = New System.Drawing.Point(18, 161)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(82, 22)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "ALAMAT"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.Location = New System.Drawing.Point(18, 123)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(79, 22)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "KONTAK"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(18, 85)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 22)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "NAMA"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(18, 46)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(55, 22)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "KODE"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(18, 7)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(27, 22)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "ID"
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.LabelAddress)
+        Me.Panel2.Controls.Add(Me.LabelId)
+        Me.Panel2.Controls.Add(Me.LabelCode)
+        Me.Panel2.Controls.Add(Me.LabelContact)
+        Me.Panel2.Controls.Add(Me.LabelName)
+        Me.Panel2.Location = New System.Drawing.Point(195, 50)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(427, 194)
+        Me.Panel2.TabIndex = 14
+        '
+        'UserDetailForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(634, 263)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Name = "UserDetailForm"
+        Me.Text = "Detail Pengguna"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Label1 As Label
@@ -216,12 +222,12 @@ Partial Class UserDetailForm
     Friend WithEvents LabelContact As Label
     Friend WithEvents LabelName As Label
     Friend WithEvents LabelAddress As Label
-    Friend WithEvents Btn_Back As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class

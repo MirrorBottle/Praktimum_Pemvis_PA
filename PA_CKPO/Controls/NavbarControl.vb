@@ -105,7 +105,7 @@ Public Class NavbarControl
                 ItemListForm.Show()
                 ItemListForm.Activate()
             Case "Logout"
-                Dim result As DialogResult = MessageBox.Show("Do you want to quit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                Dim result As DialogResult = MessageBox.Show("Apa anda ingin logout?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then
                     UserHelper.Logout()
                     Dim LoginForm = New Login()

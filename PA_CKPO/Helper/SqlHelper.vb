@@ -35,8 +35,8 @@ Module SqlHelper
         ExecuteNonQuery(query)
     End Sub
 
-    Public Sub UpdateRecord(tableName As String, values As Dictionary(Of String, String), whereClause As String)
-        Dim query As String = "UPDATE " & tableName & " SET " & String.Join(",", values.Select(Function(pair) pair.Key & "='" & pair.Value.Replace("'", "''") & "'")) & " WHERE " & whereClause
+    Public Sub UpdateRecord(tableName As String, values As Dictionary(Of String, String), id As String)
+        Dim query As String = "UPDATE " & tableName & " SET " & String.Join(",", values.Select(Function(pair) pair.Key & "='" & pair.Value.Replace("'", "''") & "'")) & " WHERE id=" & id
         ExecuteNonQuery(query)
     End Sub
 
@@ -44,5 +44,23 @@ Module SqlHelper
         Dim query As String = "DELETE FROM " & tableName & " WHERE " & whereClause
         ExecuteNonQuery(query)
     End Sub
+
+    Public Function FindRecord(query As String) As DataRow
+        Dim dt As DataTable = ExecuteQuery(query)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0)
+        Else
+            Return Nothing
+        End If
+    End Function
+
+    Public Function FindRecordById(table As String, id As String) As DataRow
+        Dim dt As DataTable = ExecuteQuery($"SELECT * FROM {table} WHERE id={id}")
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0)
+        Else
+            Return Nothing
+        End If
+    End Function
 
 End Module

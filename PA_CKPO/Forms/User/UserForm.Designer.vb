@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UserForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,206 +20,206 @@ Partial Class UserForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Btn_Back = New FontAwesome.Sharp.IconButton()
-        Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
-        TxtUsername = New TextBox()
-        TxtName = New TextBox()
-        TxtPassword = New TextBox()
-        Label6 = New Label()
-        IconButton1 = New FontAwesome.Sharp.IconButton()
-        IconButton2 = New FontAwesome.Sharp.IconButton()
-        CmbHakAkses = New ComboBox()
-        Cmb_Cutomer = New ComboBox()
-        PictureBox1 = New PictureBox()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' Btn_Back
-        ' 
-        Btn_Back.IconChar = FontAwesome.Sharp.IconChar.LeftLong
-        Btn_Back.IconColor = Color.Black
-        Btn_Back.IconFont = FontAwesome.Sharp.IconFont.Auto
-        Btn_Back.IconSize = 40
-        Btn_Back.Location = New Point(601, 87)
-        Btn_Back.Name = "Btn_Back"
-        Btn_Back.Size = New Size(119, 42)
-        Btn_Back.TabIndex = 0
-        Btn_Back.UseVisualStyleBackColor = True
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(15, 159)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(117, 28)
-        Label1.TabIndex = 1
-        Label1.Text = "Username"' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(15, 212)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(73, 28)
-        Label2.TabIndex = 2
-        Label2.Text = "Name"' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(15, 265)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(115, 28)
-        Label3.TabIndex = 3
-        Label3.Text = "Password"' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(15, 316)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(122, 28)
-        Label4.TabIndex = 4
-        Label4.Text = "Hak Akses"' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.Location = New Point(15, 371)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(113, 28)
-        Label5.TabIndex = 5
-        Label5.Text = "Customer"' 
-        ' TxtUsername
-        ' 
-        TxtUsername.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtUsername.Location = New Point(151, 159)
-        TxtUsername.Name = "TxtUsername"
-        TxtUsername.Size = New Size(569, 34)
-        TxtUsername.TabIndex = 6
-        ' 
-        ' TxtName
-        ' 
-        TxtName.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtName.Location = New Point(151, 212)
-        TxtName.Name = "TxtName"
-        TxtName.Size = New Size(569, 34)
-        TxtName.TabIndex = 7
-        ' 
-        ' TxtPassword
-        ' 
-        TxtPassword.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtPassword.Location = New Point(151, 265)
-        TxtPassword.Name = "TxtPassword"
-        TxtPassword.PasswordChar = "*"c
-        TxtPassword.Size = New Size(569, 34)
-        TxtPassword.TabIndex = 8
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Roboto", 16.8000011F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.Location = New Point(15, 87)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(151, 35)
-        Label6.TabIndex = 11
-        Label6.Text = "User Form"' 
-        ' IconButton1
-        ' 
-        IconButton1.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        IconButton1.IconChar = FontAwesome.Sharp.IconChar.TimesCircle
-        IconButton1.IconColor = Color.Black
-        IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton1.IconSize = 30
-        IconButton1.ImageAlign = ContentAlignment.MiddleLeft
-        IconButton1.Location = New Point(461, 424)
-        IconButton1.Name = "IconButton1"
-        IconButton1.Size = New Size(119, 42)
-        IconButton1.TabIndex = 12
-        IconButton1.Text = "    Clear"
-        IconButton1.UseVisualStyleBackColor = True
-        ' 
-        ' IconButton2
-        ' 
-        IconButton2.BackColor = Color.LightGreen
-        IconButton2.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        IconButton2.IconChar = FontAwesome.Sharp.IconChar.CheckCircle
-        IconButton2.IconColor = Color.Black
-        IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton2.IconSize = 30
-        IconButton2.ImageAlign = ContentAlignment.MiddleLeft
-        IconButton2.Location = New Point(601, 424)
-        IconButton2.Name = "IconButton2"
-        IconButton2.Size = New Size(119, 42)
-        IconButton2.TabIndex = 13
-        IconButton2.Text = "Submit"
-        IconButton2.TextAlign = ContentAlignment.MiddleRight
-        IconButton2.UseVisualStyleBackColor = False
-        ' 
-        ' CmbHakAkses
-        ' 
-        CmbHakAkses.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        CmbHakAkses.FormattingEnabled = True
-        CmbHakAkses.Items.AddRange(New Object() {"1. Admin", "2. logistics", "3. Customer"})
-        CmbHakAkses.Location = New Point(151, 316)
-        CmbHakAkses.Name = "CmbHakAkses"
-        CmbHakAkses.Size = New Size(569, 35)
-        CmbHakAkses.TabIndex = 14
-        ' 
-        ' Cmb_Cutomer
-        ' 
-        Cmb_Cutomer.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Cmb_Cutomer.FormattingEnabled = True
-        Cmb_Cutomer.Location = New Point(151, 373)
-        Cmb_Cutomer.Name = "Cmb_Cutomer"
-        Cmb_Cutomer.Size = New Size(569, 35)
-        Cmb_Cutomer.TabIndex = 15
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = Resources.Resources.logo
-        PictureBox1.Location = New Point(12, 5)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(154, 74)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 16
-        PictureBox1.TabStop = False
-        ' 
-        ' UserForm
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(732, 493)
-        Controls.Add(PictureBox1)
-        Controls.Add(Cmb_Cutomer)
-        Controls.Add(CmbHakAkses)
-        Controls.Add(IconButton2)
-        Controls.Add(IconButton1)
-        Controls.Add(Label6)
-        Controls.Add(TxtPassword)
-        Controls.Add(TxtName)
-        Controls.Add(TxtUsername)
-        Controls.Add(Label5)
-        Controls.Add(Label1)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
-        Controls.Add(Btn_Back)
-        Name = "UserForm"
-        Text = "UserForm"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
-    End Sub
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtUsername = New System.Windows.Forms.TextBox()
+        Me.TxtName = New System.Windows.Forms.TextBox()
+        Me.TxtPassword = New System.Windows.Forms.TextBox()
+        Me.LabelHeader = New System.Windows.Forms.Label()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
+        Me.CmbHakAkses = New System.Windows.Forms.ComboBox()
+        Me.CmbCustomer = New System.Windows.Forms.ComboBox()
+        Me.LabelPassword = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(12, 73)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(93, 22)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Username"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(12, 113)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(59, 22)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Name"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(12, 153)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(89, 22)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Password"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(12, 206)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(95, 22)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Hak Akses"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(12, 247)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 22)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Customer"
+        '
+        'TxtUsername
+        '
+        Me.TxtUsername.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtUsername.Location = New System.Drawing.Point(131, 73)
+        Me.TxtUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtUsername.Name = "TxtUsername"
+        Me.TxtUsername.Size = New System.Drawing.Size(498, 29)
+        Me.TxtUsername.TabIndex = 6
+        '
+        'TxtName
+        '
+        Me.TxtName.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtName.Location = New System.Drawing.Point(131, 113)
+        Me.TxtName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtName.Name = "TxtName"
+        Me.TxtName.Size = New System.Drawing.Size(498, 29)
+        Me.TxtName.TabIndex = 7
+        '
+        'TxtPassword
+        '
+        Me.TxtPassword.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtPassword.Location = New System.Drawing.Point(131, 153)
+        Me.TxtPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtPassword.Size = New System.Drawing.Size(498, 29)
+        Me.TxtPassword.TabIndex = 8
+        '
+        'LabelHeader
+        '
+        Me.LabelHeader.AutoSize = True
+        Me.LabelHeader.Font = New System.Drawing.Font("Roboto", 16.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.LabelHeader.Location = New System.Drawing.Point(12, 24)
+        Me.LabelHeader.Name = "LabelHeader"
+        Me.LabelHeader.Size = New System.Drawing.Size(204, 28)
+        Me.LabelHeader.TabIndex = 11
+        Me.LabelHeader.Text = "Tambah Pengguna"
+        '
+        'IconButton1
+        '
+        Me.IconButton1.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.TimesCircle
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 30
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(402, 288)
+        Me.IconButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(104, 32)
+        Me.IconButton1.TabIndex = 12
+        Me.IconButton1.Text = "    Clear"
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
+        'IconButton2
+        '
+        Me.IconButton2.BackColor = System.Drawing.Color.LightGreen
+        Me.IconButton2.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.CheckCircle
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.IconSize = 30
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton2.Location = New System.Drawing.Point(525, 288)
+        Me.IconButton2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(104, 32)
+        Me.IconButton2.TabIndex = 13
+        Me.IconButton2.Text = "Submit"
+        Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton2.UseVisualStyleBackColor = False
+        '
+        'CmbHakAkses
+        '
+        Me.CmbHakAkses.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.CmbHakAkses.FormattingEnabled = True
+        Me.CmbHakAkses.Items.AddRange(New Object() {"Admin", "Logistic", "Customer"})
+        Me.CmbHakAkses.Location = New System.Drawing.Point(131, 206)
+        Me.CmbHakAkses.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CmbHakAkses.Name = "CmbHakAkses"
+        Me.CmbHakAkses.Size = New System.Drawing.Size(498, 30)
+        Me.CmbHakAkses.TabIndex = 14
+        '
+        'CmbCustomer
+        '
+        Me.CmbCustomer.Enabled = False
+        Me.CmbCustomer.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.CmbCustomer.FormattingEnabled = True
+        Me.CmbCustomer.Location = New System.Drawing.Point(131, 249)
+        Me.CmbCustomer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CmbCustomer.Name = "CmbCustomer"
+        Me.CmbCustomer.Size = New System.Drawing.Size(498, 30)
+        Me.CmbCustomer.TabIndex = 15
+        '
+        'LabelPassword
+        '
+        Me.LabelPassword.AutoSize = True
+        Me.LabelPassword.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.LabelPassword.ForeColor = System.Drawing.Color.IndianRed
+        Me.LabelPassword.Location = New System.Drawing.Point(377, 184)
+        Me.LabelPassword.Name = "LabelPassword"
+        Me.LabelPassword.Size = New System.Drawing.Size(252, 14)
+        Me.LabelPassword.TabIndex = 16
+        Me.LabelPassword.Text = "*Kosongkan password apabila tidak mengubah"
+        Me.LabelPassword.Visible = False
+        '
+        'UserForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(634, 328)
+        Me.Controls.Add(Me.LabelPassword)
+        Me.Controls.Add(Me.CmbCustomer)
+        Me.Controls.Add(Me.CmbHakAkses)
+        Me.Controls.Add(Me.IconButton2)
+        Me.Controls.Add(Me.IconButton1)
+        Me.Controls.Add(Me.LabelHeader)
+        Me.Controls.Add(Me.TxtPassword)
+        Me.Controls.Add(Me.TxtName)
+        Me.Controls.Add(Me.TxtUsername)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Name = "UserForm"
+        Me.Text = "UserForm"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-    Friend WithEvents Btn_Back As FontAwesome.Sharp.IconButton
+    End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
@@ -228,10 +228,10 @@ Partial Class UserForm
     Friend WithEvents TxtUsername As TextBox
     Friend WithEvents TxtName As TextBox
     Friend WithEvents TxtPassword As TextBox
-    Friend WithEvents Label6 As Label
+    Friend WithEvents LabelHeader As Label
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents CmbHakAkses As ComboBox
-    Friend WithEvents Cmb_Cutomer As ComboBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents CmbCustomer As ComboBox
+    Friend WithEvents LabelPassword As Label
 End Class
