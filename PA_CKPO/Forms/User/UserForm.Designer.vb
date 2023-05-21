@@ -164,7 +164,7 @@ Partial Class UserForm
         '
         Me.CmbHakAkses.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.CmbHakAkses.FormattingEnabled = True
-        Me.CmbHakAkses.Items.AddRange(New Object() {"Admin", "Logistic", "Customer"})
+        Me.CmbHakAkses.Items.AddRange(New Object() {"Admin", "Logistik", "Customer"})
         Me.CmbHakAkses.Location = New System.Drawing.Point(131, 206)
         Me.CmbHakAkses.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CmbHakAkses.Name = "CmbHakAkses"

@@ -14,4 +14,23 @@
         Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
         Return Datatable
     End Function
+
+
+    Public Function PurchaseOrderAdminItemList(Optional Keyword As String = Nothing) As DataTable
+        Dim Query As String = $"SELECT
+            items.id,
+            items.code,
+            CONCAT(items.name, ' - ', items.brand, ' - ', items.color) as name,
+            REPLACE(FORMAT(CAST(items.price AS DECIMAL), 0), ',', '.') as price,
+            items.uom,
+            suppliers.code as supplier
+        FROM items
+        JOIN suppliers ON items.supplier_id=suppliers.id"
+        If Keyword IsNot Nothing Then
+            Query &= $" WHERE items.name LIKE '%{Keyword}%'"
+        End If
+        Query &= $" ORDER BY items.id"
+        Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
+        Return Datatable
+    End Function
 End Module

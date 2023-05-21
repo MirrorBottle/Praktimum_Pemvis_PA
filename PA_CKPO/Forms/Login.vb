@@ -2,7 +2,7 @@
 Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If UserHelper.IsLogin() Then
-            UserListForm.ShowDialog()
+            PurchaseOrderAdminForm.ShowDialog()
             Me.Close()
         End If
     End Sub

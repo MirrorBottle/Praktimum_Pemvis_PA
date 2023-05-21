@@ -3,6 +3,12 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Module Helper
+
+    Public Const PO_PENDING As String = "0"
+    Public Const PO_ADMIN_APPROVED As String = "1"
+    Public Const PO_LOGISTIC_APPROVED As String = "2"
+    Public Const PO_PAYMENT_APPROVED As String = "3"
+    Public Const PO_DONE As String = "4"
     Public Function HashPassword(password As String) As String
         Dim sha256 As SHA256 = SHA256.Create()
         Dim bytes As Byte() = Encoding.UTF8.GetBytes(password)
@@ -98,4 +104,41 @@ Module Helper
         comboBox.DisplayMember = displayMember
         comboBox.ValueMember = valueMember
     End Sub
+
+    Public Function Parse(numberString) As Integer
+        Dim sanitizedString As String = numberString.Replace(".", "") ' Remove the dot separator
+        Dim number As Integer
+
+        If Integer.TryParse(sanitizedString, number) Then
+            Return number
+        Else
+            Return 0
+        End If
+    End Function
+
+    Public Function NumberFormat(number As Integer) As String
+        Return number.ToString("N0", Globalization.CultureInfo.InvariantCulture).Replace(",", ".")
+    End Function
+
+    Public Function GetNextPurchaseOrderCode() As String
+        Dim query As String = "SELECT MAX(code) FROM purchase_orders"
+
+        Dim resultTable As DataTable = SqlHelper.ExecuteQuery(query)
+
+        If resultTable.Rows.Count > 0 AndAlso Not IsDBNull(resultTable.Rows(0)(0)) Then
+            Dim maxCode As String = resultTable.Rows(0)(0).ToString()
+
+            Dim numericPart As String = maxCode.Substring(3)
+            Dim numericValue As Integer
+
+            If Integer.TryParse(numericPart, numericValue) Then
+                Dim nextNumericValue As Integer = numericValue + 1
+                Dim nextCode As String = nextNumericValue.ToString("D3")
+
+                Return "PO-" & nextCode
+            End If
+        End If
+
+        Return "PO-001"
+    End Function
 End Module

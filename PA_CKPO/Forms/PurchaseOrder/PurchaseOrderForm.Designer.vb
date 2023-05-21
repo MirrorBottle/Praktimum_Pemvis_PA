@@ -26,9 +26,10 @@ Partial Class PurchaseOrderForm
         '
         'PurchaseOrderForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(942, 493)
+        Me.ClientSize = New System.Drawing.Size(826, 451)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "PurchaseOrderForm"
         Me.Text = "PurchaseOrderForm"
         Me.ResumeLayout(False)

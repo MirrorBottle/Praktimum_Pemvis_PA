@@ -30,10 +30,38 @@ Module SqlHelper
         End Using
     End Sub
 
+    Public Function ExecuteScalar(query As String) As Object
+        System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance)
+        Using conn As New MySqlConnection(connectionString)
+            Using cmd As New MySqlCommand(query, conn)
+                conn.Open()
+                Dim result As Object = cmd.ExecuteScalar()
+                conn.Close()
+                Return result
+            End Using
+        End Using
+    End Function
+
+    Public Function GetLastInsertedID() As Integer
+        Dim query As String = "SELECT LAST_INSERT_ID()"
+        Dim result As Object = ExecuteScalar(query)
+        Dim id As Integer = 0
+        If result IsNot Nothing AndAlso Integer.TryParse(result.ToString(), id) Then
+            Return id
+        End If
+        Return 0
+    End Function
+
     Public Sub InsertRecord(tableName As String, values As Dictionary(Of String, String))
         Dim query As String = "INSERT INTO " & tableName & " (" & String.Join(",", values.Keys) & ") VALUES (" & String.Join(",", values.Values.Select(Function(value) "'" & value.Replace("'", "''") & "'")) & ")"
         ExecuteNonQuery(query)
     End Sub
+
+    Public Function InsertRecordAndGetID(tableName As String, values As Dictionary(Of String, String)) As Integer
+        InsertRecord(tableName, values)
+        Dim id As Integer = GetLastInsertedID()
+        Return id
+    End Function
 
     Public Sub UpdateRecord(tableName As String, values As Dictionary(Of String, String), id As String)
         Dim query As String = "UPDATE " & tableName & " SET " & String.Join(",", values.Select(Function(pair) pair.Key & "='" & pair.Value.Replace("'", "''") & "'")) & " WHERE id=" & id
