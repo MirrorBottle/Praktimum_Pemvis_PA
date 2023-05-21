@@ -29,27 +29,29 @@ Partial Class AdminDashboardForm
         'NavbarControl1
         '
         Me.NavbarControl1.Location = New System.Drawing.Point(0, 0)
+        Me.NavbarControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.NavbarControl1.Name = "NavbarControl1"
-        Me.NavbarControl1.Size = New System.Drawing.Size(1375, 50)
+        Me.NavbarControl1.Size = New System.Drawing.Size(1203, 38)
         Me.NavbarControl1.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(12, 53)
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(10, 40)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(246, 35)
+        Me.Label2.Size = New System.Drawing.Size(196, 28)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Dashboard Admin"
         '
         'AdminDashboardForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1092, 643)
+        Me.ClientSize = New System.Drawing.Size(956, 482)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.NavbarControl1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "AdminDashboardForm"
         Me.Text = "Dashboard Admin"
         Me.ResumeLayout(False)
