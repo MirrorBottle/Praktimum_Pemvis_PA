@@ -41,7 +41,7 @@ Partial Class UserListForm
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCari.Location = New System.Drawing.Point(67, 76)
+        Me.txtCari.Location = New System.Drawing.Point(68, 69)
         Me.txtCari.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(531, 28)
@@ -57,7 +57,7 @@ Partial Class UserListForm
         Me.btnTambah.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnTambah.IconSize = 25
         Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTambah.Location = New System.Drawing.Point(689, 72)
+        Me.btnTambah.Location = New System.Drawing.Point(689, 68)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(89, 30)
         Me.btnTambah.TabIndex = 4
@@ -75,7 +75,7 @@ Partial Class UserListForm
         Me.btnHapus.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnHapus.IconSize = 25
         Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHapus.Location = New System.Drawing.Point(859, 72)
+        Me.btnHapus.Location = New System.Drawing.Point(859, 68)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
         Me.btnHapus.Size = New System.Drawing.Size(88, 30)
@@ -94,7 +94,7 @@ Partial Class UserListForm
         Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnEdit.IconSize = 25
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEdit.Location = New System.Drawing.Point(783, 72)
+        Me.btnEdit.Location = New System.Drawing.Point(783, 68)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
         Me.btnEdit.Size = New System.Drawing.Size(71, 30)
@@ -173,7 +173,7 @@ Partial Class UserListForm
         Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnRefresh.IconSize = 25
         Me.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRefresh.Location = New System.Drawing.Point(606, 72)
+        Me.btnRefresh.Location = New System.Drawing.Point(606, 68)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(78, 30)
         Me.btnRefresh.TabIndex = 9

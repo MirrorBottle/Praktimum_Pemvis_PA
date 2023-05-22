@@ -17,10 +17,10 @@ Public Class NavbarControl
                 Dim userListItem As New ToolStripMenuItem("Manajemen Pengguna") With {.Name = "UserList"}
 
 
-                Dim AdminPOValidation As New ToolStripMenuItem("Validasi Admin") With {.Name = "PurchaseOrderListAdminValidation"}
+                Dim AdminPOValidation As New ToolStripMenuItem("Approval Admin") With {.Name = "PurchaseOrderListApprovalAdmin"}
                 AddHandler AdminPOValidation.Click, AddressOf ToolStripMenuItem_Click
 
-                Dim AdminPOLogistic As New ToolStripMenuItem("Logistik") With {.Name = "PurchaseOrderListLogisticValidation"}
+                Dim AdminPOLogistic As New ToolStripMenuItem("Logistik") With {.Name = "PurchaseOrderListApprovalLogistic"}
                 AddHandler AdminPOLogistic.Click, AddressOf ToolStripMenuItem_Click
 
 
@@ -115,10 +115,10 @@ Public Class NavbarControl
 
         ' Perform actions based on the clicked item name
         Select Case itemName
-            Case "PurchaseOrderListAdminValidation"
-                PurchaseOrderListForm.Show()
-                PurchaseOrderListForm.Activate()
-            Case "PurchaseOrderListLogisticValidation"
+            Case "PurchaseOrderListApprovalAdmin"
+                PurchaseOrderApprovalAdminListForm.Show()
+                PurchaseOrderApprovalAdminListForm.Activate()
+            Case "PurchaseOrderListApprovalLogistic"
                 PurchaseOrderListForm.Show()
                 PurchaseOrderListForm.Activate()
             Case "PurchaseOrderListPayment"
@@ -141,4 +141,5 @@ Public Class NavbarControl
                 UserListForm.Activate()
         End Select
     End Sub
+
 End Class

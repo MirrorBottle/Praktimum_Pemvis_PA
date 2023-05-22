@@ -33,4 +33,57 @@
         Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
         Return Datatable
     End Function
+
+    Public Function PurchaseOrderAdminApprovalList(Optional Keyword As String = Nothing) As DataTable
+        Dim Query As String = $"SELECT
+            purchase_orders.id,
+            purchase_orders.code,
+            customers.name as customer_name,
+            REPLACE(FORMAT(CAST(purchase_orders.total_amount AS DECIMAL), 0), ',', '.') as total_amount,
+            (
+                SELECT COUNT(*) 
+                FROM purchase_order_items 
+                WHERE purchase_order_items.purchase_order_id = purchase_orders.id
+            ) AS items_total
+        FROM purchase_orders
+        JOIN customers ON purchase_orders.customer_id=customers.id"
+        If Keyword IsNot Nothing Then
+            Query &= $" WHERE purchase_orders.code LIKE '%{Keyword}%' AND status=0 ORDER BY purchase_orders.id DESC"
+        Else
+            Query &= $" WHERE status=0 ORDER BY purchase_orders.id DESC"
+        End If
+        Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
+        Return Datatable
+    End Function
+
+    Public Function PurchaseOrderItemList(id As String) As DataTable
+        Dim Query As String = $"SELECT
+            purchase_order_items.id,
+            items.code as item_code,
+            CONCAT(items.name, ' - ', items.brand, ' - ', items.color) as item_name,
+            items.uom as item_uom,
+            suppliers.name as supplier_name,
+            REPLACE(FORMAT(CAST(purchase_order_items.price_request / purchase_order_items.amount_request AS DECIMAL), 0), ',', '.') as item_price,
+            purchase_order_items.amount_request,
+            REPLACE(FORMAT(CAST(purchase_order_items.price_request AS DECIMAL), 0), ',', '.') as price_request
+        FROM purchase_order_items
+        JOIN purchase_orders ON purchase_order_items.purchase_order_id=purchase_orders.id
+        JOIN items ON purchase_order_items.item_id=items.id
+        JOIN suppliers ON items.supplier_id=suppliers.id
+        WHERE purchase_order_items.purchase_order_id={id}"
+        Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
+        Return Datatable
+    End Function
+
+    Public Function PurchaseOrderDetail(id As String) As DataRow
+        Dim Query As String = $"SELECT
+            purchase_orders.*,
+            customers.name as customer_name
+        FROM purchase_orders
+        JOIN customers ON purchase_orders.customer_id=customers.id
+        WHERE purchase_orders.id={id}"
+
+        Dim DataRow As DataRow = SqlHelper.FindRecord(Query)
+        Return DataRow
+    End Function
 End Module
