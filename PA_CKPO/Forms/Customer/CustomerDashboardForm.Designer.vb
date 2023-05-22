@@ -27,6 +27,7 @@ Partial Class CustomerDashboardForm
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnTambah = New FontAwesome.Sharp.IconButton()
+        Me.btnRefresh = New FontAwesome.Sharp.IconButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,6 +51,8 @@ Partial Class CustomerDashboardForm
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 120)
         Me.DataGridView1.Name = "DataGridView1"
@@ -77,19 +80,38 @@ Partial Class CustomerDashboardForm
         Me.btnTambah.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnTambah.IconSize = 25
         Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTambah.Location = New System.Drawing.Point(840, 84)
+        Me.btnTambah.Location = New System.Drawing.Point(858, 84)
         Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(104, 30)
+        Me.btnTambah.Size = New System.Drawing.Size(86, 30)
         Me.btnTambah.TabIndex = 15
         Me.btnTambah.Text = "Buat PO"
         Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnTambah.UseVisualStyleBackColor = False
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRefresh.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnRefresh.IconChar = FontAwesome.Sharp.IconChar.Repeat
+        Me.btnRefresh.IconColor = System.Drawing.Color.Black
+        Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnRefresh.IconSize = 25
+        Me.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRefresh.Location = New System.Drawing.Point(774, 84)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(78, 30)
+        Me.btnRefresh.TabIndex = 18
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnRefresh.UseVisualStyleBackColor = False
         '
         'CustomerDashboardForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(956, 482)
+        Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
@@ -97,7 +119,7 @@ Partial Class CustomerDashboardForm
         Me.Controls.Add(Me.NavbarControl1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "CustomerDashboardForm"
-        Me.Text = "CustomerDashboardForm"
+        Me.Text = "Dashboard Kustomer"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -109,4 +131,5 @@ Partial Class CustomerDashboardForm
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents btnTambah As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnRefresh As FontAwesome.Sharp.IconButton
 End Class

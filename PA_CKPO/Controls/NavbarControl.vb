@@ -24,7 +24,7 @@ Public Class NavbarControl
                 AddHandler AdminPOLogistic.Click, AddressOf ToolStripMenuItem_Click
 
 
-                Dim AdminPOPayment As New ToolStripMenuItem("Pembayaran") With {.Name = "PurchaseOrderListPayment"}
+                Dim AdminPOPayment As New ToolStripMenuItem("Penyelesaian") With {.Name = "PurchaseOrderListPayment"}
                 AddHandler AdminPOPayment.Click, AddressOf ToolStripMenuItem_Click
 
 

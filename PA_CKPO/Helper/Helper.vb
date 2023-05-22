@@ -7,8 +7,7 @@ Module Helper
     Public Const PO_PENDING As String = "0"
     Public Const PO_ADMIN_APPROVED As String = "1"
     Public Const PO_LOGISTIC_APPROVED As String = "2"
-    Public Const PO_PAYMENT_APPROVED As String = "3"
-    Public Const PO_DONE As String = "4"
+    Public Const PO_DONE As String = "3"
     Public Function HashPassword(password As String) As String
         Dim sha256 As SHA256 = SHA256.Create()
         Dim bytes As Byte() = Encoding.UTF8.GetBytes(password)

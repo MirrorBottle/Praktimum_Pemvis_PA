@@ -86,4 +86,28 @@
         Dim DataRow As DataRow = SqlHelper.FindRecord(Query)
         Return DataRow
     End Function
+
+    Public Function PurchaseOrderLogisticApprovalList(Optional Keyword As String = Nothing, Optional logisticId As String = Nothing) As DataTable
+        Dim Query As String = $"SELECT
+            purchase_orders.id,
+            purchase_orders.code,
+            customers.name as customer_name,
+            REPLACE(FORMAT(CAST(purchase_orders.total_amount AS DECIMAL), 0), ',', '.') as total_amount,
+            (
+                SELECT COUNT(*) 
+                FROM purchase_order_items 
+                WHERE purchase_order_items.purchase_order_id = purchase_orders.id
+            ) AS items_total
+        FROM purchase_orders
+        JOIN customers ON purchase_orders.customer_id=customers.id"
+        If Keyword IsNot Nothing Then
+            Query &= $" WHERE purchase_orders.code LIKE '%{Keyword}%' AND status=1 ORDER BY purchase_orders.id DESC"
+        ElseIf logisticId IsNot Nothing Then
+            Query &= $" WHERE purchase_orders.logistic_id={logisticId} AND status=1 ORDER BY purchase_orders.id DESC"
+        Else
+            Query &= $" WHERE status=1 ORDER BY purchase_orders.id DESC"
+        End If
+        Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
+        Return Datatable
+    End Function
 End Module
