@@ -49,7 +49,7 @@ Public Class NavbarControl
                 AddHandler AdminSupplierMenuItem.Click, AddressOf ToolStripMenuItem_Click
 
                 Dim AdminCustomerMenuItem As New ToolStripMenuItem("Manajemen Kustomer") With {.Name = "CustomerList"}
-                AddHandler AdminSupplierMenuItem.Click, AddressOf ToolStripMenuItem_Click
+                AddHandler AdminCustomerMenuItem.Click, AddressOf ToolStripMenuItem_Click
 
                 Dim AdminUserMenuItem As New ToolStripMenuItem("Manajemen Pengguna") With {.Name = "UserList"}
                 AddHandler AdminUserMenuItem.Click, AddressOf ToolStripMenuItem_Click
@@ -112,7 +112,6 @@ Public Class NavbarControl
         Dim clickedItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
         Dim itemName As String = clickedItem.Name
         Dim currentForm As Form = Me.FindForm()
-
         ' Perform actions based on the clicked item name
         Select Case itemName
             Case "PurchaseOrderListApprovalAdmin"

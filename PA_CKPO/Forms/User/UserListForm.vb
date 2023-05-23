@@ -50,7 +50,7 @@ Public Class UserListForm
         Dim id As String = row.Cells(0).Value
         Dim result As DialogResult = MessageBox.Show("Apa anda ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
-            SqlHelper.DeleteRecord("users", $"id={id}")
+            SqlHelper.DeleteRecord("customers", $"id={id}")
             Helper.ShowMessage("Data berhasil dihapus", "Success")
             Me.LoadData()
         End If

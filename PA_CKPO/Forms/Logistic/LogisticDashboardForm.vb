@@ -20,6 +20,8 @@
         BtnApprove.Enabled = True
     End Sub
 
+    Private supplierId As String = Nothing
+
     Private Sub BtnApprove_Click(sender As Object, e As EventArgs) Handles BtnApprove.Click
         Dim row As DataGridViewRow = DataGridView1.Rows(DataGridView1.CurrentRow.Index)
         LogisticPOApprovalForm.LoadData(row.Cells(0).Value)
