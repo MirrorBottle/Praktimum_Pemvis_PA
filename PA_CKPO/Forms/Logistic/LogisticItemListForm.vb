@@ -1,14 +1,10 @@
-﻿Public Class LogisticPOListForm
+﻿Public Class LogisticItemListForm
     Public Sub LoadData(Optional Keyword As String = Nothing)
-        DataGridView1.DataSource = QueryHelper.LogisticPurchaseOrderHistory(Keyword)
+        DataGridView1.DataSource = QueryHelper.ItemList(Keyword)
         DataGridView1.ReadOnly = False
         DataGridView1.Refresh()
     End Sub
 
-    Private Sub LogisticPOListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim Credentials = UserHelper.GetCredentials()
-        Me.LoadData()
-    End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         Me.LoadData()
@@ -20,4 +16,7 @@
         End If
     End Sub
 
+    Private Sub LogisticItemListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.LoadData()
+    End Sub
 End Class

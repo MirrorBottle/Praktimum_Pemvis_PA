@@ -26,33 +26,34 @@ Partial Class CustomerListForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnRefresh = New FontAwesome.Sharp.IconButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEdit = New FontAwesome.Sharp.IconButton()
-        Me.btnHapus = New FontAwesome.Sharp.IconButton()
-        Me.btnTambah = New FontAwesome.Sharp.IconButton()
-        Me.txtCari = New System.Windows.Forms.TextBox()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.customer_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.contact_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.contact_number = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnEdit = New FontAwesome.Sharp.IconButton()
+        Me.btnHapus = New FontAwesome.Sharp.IconButton()
+        Me.btnTambah = New FontAwesome.Sharp.IconButton()
+        Me.txtCari = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NavbarControl1
         '
         Me.NavbarControl1.Location = New System.Drawing.Point(0, 0)
+        Me.NavbarControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.NavbarControl1.Name = "NavbarControl1"
-        Me.NavbarControl1.Size = New System.Drawing.Size(1374, 50)
+        Me.NavbarControl1.Size = New System.Drawing.Size(1202, 38)
         Me.NavbarControl1.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(10, 61)
+        Me.Label2.Location = New System.Drawing.Point(9, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(303, 35)
+        Me.Label2.Size = New System.Drawing.Size(239, 28)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Manajamen Kustomer"
         '
@@ -66,10 +67,9 @@ Partial Class CustomerListForm
         Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnRefresh.IconSize = 25
         Me.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRefresh.Location = New System.Drawing.Point(692, 101)
-        Me.btnRefresh.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnRefresh.Location = New System.Drawing.Point(606, 76)
         Me.btnRefresh.Name = "btnRefresh"
-        Me.btnRefresh.Size = New System.Drawing.Size(89, 40)
+        Me.btnRefresh.Size = New System.Drawing.Size(78, 30)
         Me.btnRefresh.TabIndex = 17
         Me.btnRefresh.Text = "Refresh"
         Me.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -81,94 +81,13 @@ Partial Class CustomerListForm
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.customer_name, Me.contact_name, Me.contact_number, Me.address})
-        Me.DataGridView1.Location = New System.Drawing.Point(10, 151)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.DataGridView1.Location = New System.Drawing.Point(9, 113)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(1071, 479)
+        Me.DataGridView1.Size = New System.Drawing.Size(937, 359)
         Me.DataGridView1.TabIndex = 16
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(10, 110)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 27)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Cari :"
-        '
-        'btnEdit
-        '
-        Me.btnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnEdit.Enabled = False
-        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnEdit.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnEdit.IconChar = FontAwesome.Sharp.IconChar.FileEdit
-        Me.btnEdit.IconColor = System.Drawing.Color.Black
-        Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnEdit.IconSize = 25
-        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEdit.Location = New System.Drawing.Point(894, 101)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btnEdit.Size = New System.Drawing.Size(81, 40)
-        Me.btnEdit.TabIndex = 14
-        Me.btnEdit.Text = "Edit"
-        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEdit.UseVisualStyleBackColor = False
-        '
-        'btnHapus
-        '
-        Me.btnHapus.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnHapus.Enabled = False
-        Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnHapus.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnHapus.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
-        Me.btnHapus.IconColor = System.Drawing.Color.Black
-        Me.btnHapus.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnHapus.IconSize = 25
-        Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHapus.Location = New System.Drawing.Point(981, 101)
-        Me.btnHapus.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btnHapus.Size = New System.Drawing.Size(101, 40)
-        Me.btnHapus.TabIndex = 13
-        Me.btnHapus.Text = "Hapus"
-        Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnHapus.UseVisualStyleBackColor = False
-        '
-        'btnTambah
-        '
-        Me.btnTambah.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnTambah.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnTambah.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
-        Me.btnTambah.IconColor = System.Drawing.Color.Black
-        Me.btnTambah.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnTambah.IconSize = 25
-        Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTambah.Location = New System.Drawing.Point(786, 101)
-        Me.btnTambah.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(102, 40)
-        Me.btnTambah.TabIndex = 12
-        Me.btnTambah.Text = "Tambah"
-        Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnTambah.UseVisualStyleBackColor = False
-        '
-        'txtCari
-        '
-        Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCari.Location = New System.Drawing.Point(78, 103)
-        Me.txtCari.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.txtCari.Name = "txtCari"
-        Me.txtCari.Size = New System.Drawing.Size(606, 34)
-        Me.txtCari.TabIndex = 11
         '
         'id
         '
@@ -215,11 +134,88 @@ Partial Class CustomerListForm
         Me.address.ReadOnly = True
         Me.address.Width = 250
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(9, 82)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 22)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Cari :"
+        '
+        'btnEdit
+        '
+        Me.btnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnEdit.Enabled = False
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEdit.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnEdit.IconChar = FontAwesome.Sharp.IconChar.FileEdit
+        Me.btnEdit.IconColor = System.Drawing.Color.Black
+        Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEdit.IconSize = 25
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEdit.Location = New System.Drawing.Point(782, 76)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
+        Me.btnEdit.Size = New System.Drawing.Size(71, 30)
+        Me.btnEdit.TabIndex = 14
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
+        'btnHapus
+        '
+        Me.btnHapus.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnHapus.Enabled = False
+        Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHapus.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnHapus.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
+        Me.btnHapus.IconColor = System.Drawing.Color.Black
+        Me.btnHapus.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnHapus.IconSize = 25
+        Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHapus.Location = New System.Drawing.Point(858, 76)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
+        Me.btnHapus.Size = New System.Drawing.Size(88, 30)
+        Me.btnHapus.TabIndex = 13
+        Me.btnHapus.Text = "Hapus"
+        Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnHapus.UseVisualStyleBackColor = False
+        '
+        'btnTambah
+        '
+        Me.btnTambah.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTambah.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnTambah.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
+        Me.btnTambah.IconColor = System.Drawing.Color.Black
+        Me.btnTambah.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnTambah.IconSize = 25
+        Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTambah.Location = New System.Drawing.Point(688, 76)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(89, 30)
+        Me.btnTambah.TabIndex = 12
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnTambah.UseVisualStyleBackColor = False
+        '
+        'txtCari
+        '
+        Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtCari.Location = New System.Drawing.Point(68, 77)
+        Me.txtCari.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(531, 28)
+        Me.txtCari.TabIndex = 11
+        '
         'CustomerListForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1093, 643)
+        Me.ClientSize = New System.Drawing.Size(956, 482)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.DataGridView1)
@@ -229,6 +225,7 @@ Partial Class CustomerListForm
         Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.NavbarControl1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "CustomerListForm"
         Me.Text = "Daftar Kustomer"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
