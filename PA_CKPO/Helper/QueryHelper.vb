@@ -225,4 +225,20 @@
         Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
         Return Datatable
     End Function
+
+    Public Function CustomerList(Optional Keyword As String = Nothing) As DataTable
+        Dim Query As String = $"SELECT
+                customers.id,
+                customers.name as customer_name,
+                customers.contact_name,
+                customers.contact_number,
+                customers.address
+            FROM customers"
+        If Keyword IsNot Nothing Then
+            Query &= $" WHERE name LIKE '%{Keyword}%'"
+        End If
+        Query &= $" ORDER BY id DESC"
+        Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
+        Return Datatable
+    End Function
 End Module
