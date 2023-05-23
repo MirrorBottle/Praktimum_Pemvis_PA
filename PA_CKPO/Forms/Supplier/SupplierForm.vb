@@ -15,6 +15,12 @@
 
     End Sub
 
+    Private Sub SupplierForm_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
+        LabelHeader.Text = "Tambah Data Supplier"
+        Me.supplierId = Nothing
+        Helper.FormClear(Me)
+    End Sub
+
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Helper.FormClear(Me)
     End Sub

@@ -88,14 +88,14 @@ Public Class NavbarControl
                 LogisticDashboardForm.Show()
                 LogisticDashboardForm.Activate()
             Case "LogisticItem"
-                ItemListForm.Show()
-                ItemListForm.Activate()
+                LogisticItemListForm.Show()
+                LogisticItemListForm.Activate()
             Case "CustomerDashboard"
                 CustomerDashboardForm.Show()
                 CustomerDashboardForm.Activate()
             Case "CustomerItem"
-                ItemListForm.Show()
-                ItemListForm.Activate()
+                CustomerItemListForm.Show()
+                CustomerItemListForm.Activate()
             Case "Logout"
                 Dim result As DialogResult = MessageBox.Show("Apa anda ingin logout?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then

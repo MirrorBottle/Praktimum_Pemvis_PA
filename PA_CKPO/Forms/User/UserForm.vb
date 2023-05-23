@@ -72,4 +72,5 @@ Public Class UserForm
             MessageBox.Show("Mohon lengkapi isian anda!")
         End If
     End Sub
+
 End Class
