@@ -24,7 +24,7 @@ Public Class NavbarControl
                 AddHandler AdminPOLogistic.Click, AddressOf ToolStripMenuItem_Click
 
 
-                Dim AdminPOPayment As New ToolStripMenuItem("Penyelesaian") With {.Name = "PurchaseOrderListPayment"}
+                Dim AdminPOPayment As New ToolStripMenuItem("Penyelesaian") With {.Name = "PurchaseOrderListFinish"}
                 AddHandler AdminPOPayment.Click, AddressOf ToolStripMenuItem_Click
 
 
@@ -119,11 +119,11 @@ Public Class NavbarControl
                 PurchaseOrderApprovalAdminListForm.Show()
                 PurchaseOrderApprovalAdminListForm.Activate()
             Case "PurchaseOrderListApprovalLogistic"
-                PurchaseOrderListForm.Show()
-                PurchaseOrderListForm.Activate()
-            Case "PurchaseOrderListPayment"
-                PurchaseOrderListForm.Show()
-                PurchaseOrderListForm.Activate()
+                PurchaseOrderApprovalLogisticListForm.Show()
+                PurchaseOrderApprovalLogisticListForm.Activate()
+            Case "PurchaseOrderListFinish"
+                PurchaseOrderFinishListForm.Show()
+                PurchaseOrderFinishListForm.Activate()
             Case "PurchaseOrderList"
                 PurchaseOrderListForm.Show()
                 PurchaseOrderListForm.Activate()

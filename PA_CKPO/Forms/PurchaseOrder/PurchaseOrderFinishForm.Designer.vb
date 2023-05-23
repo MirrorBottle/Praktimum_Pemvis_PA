@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PurchaseOrderApprovalAdminForm
+Partial Class PurchaseOrderFinishForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,6 +22,10 @@ Partial Class PurchaseOrderApprovalAdminForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.BtnClear = New FontAwesome.Sharp.IconButton()
+        Me.TxtCustomer = New System.Windows.Forms.TextBox()
+        Me.TxtPayment = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtCode = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -30,6 +34,7 @@ Partial Class PurchaseOrderApprovalAdminForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.is_fullfiled = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.item_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.item_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.item_uom = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,54 +43,96 @@ Partial Class PurchaseOrderApprovalAdminForm
         Me.amount_request = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.price_request = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.CmbLogistic = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtPayment = New System.Windows.Forms.TextBox()
-        Me.TxtCustomer = New System.Windows.Forms.TextBox()
-        Me.BtnClear = New FontAwesome.Sharp.IconButton()
+        Me.TxtLogistic = New System.Windows.Forms.TextBox()
+        Me.TxtPaymentFinal = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'BtnClear
+        '
+        Me.BtnClear.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BtnClear.IconChar = FontAwesome.Sharp.IconChar.TimesCircle
+        Me.BtnClear.IconColor = System.Drawing.Color.Black
+        Me.BtnClear.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnClear.IconSize = 30
+        Me.BtnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnClear.Location = New System.Drawing.Point(730, 556)
+        Me.BtnClear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(104, 32)
+        Me.BtnClear.TabIndex = 77
+        Me.BtnClear.Text = "    Close"
+        Me.BtnClear.UseVisualStyleBackColor = True
+        '
+        'TxtCustomer
+        '
+        Me.TxtCustomer.Enabled = False
+        Me.TxtCustomer.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtCustomer.Location = New System.Drawing.Point(665, 49)
+        Me.TxtCustomer.Name = "TxtCustomer"
+        Me.TxtCustomer.Size = New System.Drawing.Size(279, 31)
+        Me.TxtCustomer.TabIndex = 76
+        '
+        'TxtPayment
+        '
+        Me.TxtPayment.Enabled = False
+        Me.TxtPayment.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtPayment.Location = New System.Drawing.Point(165, 163)
+        Me.TxtPayment.Name = "TxtPayment"
+        Me.TxtPayment.Size = New System.Drawing.Size(269, 31)
+        Me.TxtPayment.TabIndex = 75
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(11, 168)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(148, 22)
+        Me.Label4.TabIndex = 74
+        Me.Label4.Text = "Est. Pembayaran"
         '
         'TxtCode
         '
         Me.TxtCode.Enabled = False
         Me.TxtCode.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtCode.Location = New System.Drawing.Point(125, 72)
+        Me.TxtCode.Location = New System.Drawing.Point(165, 49)
         Me.TxtCode.Name = "TxtCode"
-        Me.TxtCode.Size = New System.Drawing.Size(309, 31)
-        Me.TxtCode.TabIndex = 58
+        Me.TxtCode.Size = New System.Drawing.Size(267, 31)
+        Me.TxtCode.TabIndex = 73
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(11, 81)
+        Me.Label9.Location = New System.Drawing.Point(9, 58)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(27, 22)
-        Me.Label9.TabIndex = 57
+        Me.Label9.TabIndex = 72
         Me.Label9.Text = "ID"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(11, 428)
+        Me.Label7.Location = New System.Drawing.Point(9, 429)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(74, 22)
-        Me.Label7.TabIndex = 56
+        Me.Label7.TabIndex = 71
         Me.Label7.Text = "Catatan"
         '
         'TxtNote
         '
         Me.TxtNote.Enabled = False
         Me.TxtNote.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtNote.Location = New System.Drawing.Point(91, 428)
+        Me.TxtNote.Location = New System.Drawing.Point(89, 429)
         Me.TxtNote.Multiline = True
         Me.TxtNote.Name = "TxtNote"
         Me.TxtNote.Size = New System.Drawing.Size(343, 105)
-        Me.TxtNote.TabIndex = 55
+        Me.TxtNote.TabIndex = 70
         '
         'BtnSubmit
         '
@@ -96,11 +143,11 @@ Partial Class PurchaseOrderApprovalAdminForm
         Me.BtnSubmit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BtnSubmit.IconSize = 30
         Me.BtnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnSubmit.Location = New System.Drawing.Point(842, 555)
+        Me.BtnSubmit.Location = New System.Drawing.Point(840, 556)
         Me.BtnSubmit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnSubmit.Name = "BtnSubmit"
         Me.BtnSubmit.Size = New System.Drawing.Size(104, 32)
-        Me.BtnSubmit.TabIndex = 53
+        Me.BtnSubmit.TabIndex = 69
         Me.BtnSubmit.Text = "Submit"
         Me.BtnSubmit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnSubmit.UseVisualStyleBackColor = False
@@ -109,10 +156,10 @@ Partial Class PurchaseOrderApprovalAdminForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(13, 182)
+        Me.Label6.Location = New System.Drawing.Point(11, 208)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(121, 22)
-        Me.Label6.TabIndex = 49
+        Me.Label6.TabIndex = 68
         Me.Label6.Text = "Daftar Barang"
         '
         'DataGridView1
@@ -120,12 +167,12 @@ Partial Class PurchaseOrderApprovalAdminForm
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.item_code, Me.item_name, Me.item_uom, Me.supplier_name, Me.item_price, Me.amount_request, Me.price_request})
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 217)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.is_fullfiled, Me.item_code, Me.item_name, Me.item_uom, Me.supplier_name, Me.item_price, Me.amount_request, Me.price_request})
+        Me.DataGridView1.Location = New System.Drawing.Point(11, 243)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
         Me.DataGridView1.Size = New System.Drawing.Size(933, 180)
-        Me.DataGridView1.TabIndex = 44
+        Me.DataGridView1.TabIndex = 67
         '
         'id
         '
@@ -134,6 +181,12 @@ Partial Class PurchaseOrderApprovalAdminForm
         Me.id.Name = "id"
         Me.id.Visible = False
         Me.id.Width = 50
+        '
+        'is_fullfiled
+        '
+        Me.is_fullfiled.DataPropertyName = "is_fulfilled"
+        Me.is_fullfiled.HeaderText = "Status"
+        Me.is_fullfiled.Name = "is_fullfiled"
         '
         'item_code
         '
@@ -186,91 +239,68 @@ Partial Class PurchaseOrderApprovalAdminForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(13, 124)
+        Me.Label3.Location = New System.Drawing.Point(11, 100)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 22)
-        Me.Label3.TabIndex = 42
+        Me.Label3.TabIndex = 66
         Me.Label3.Text = "Logistik"
-        '
-        'CmbLogistic
-        '
-        Me.CmbLogistic.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.CmbLogistic.FormattingEnabled = True
-        Me.CmbLogistic.Location = New System.Drawing.Point(125, 121)
-        Me.CmbLogistic.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.CmbLogistic.Name = "CmbLogistic"
-        Me.CmbLogistic.Size = New System.Drawing.Size(309, 30)
-        Me.CmbLogistic.TabIndex = 41
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(523, 75)
+        Me.Label1.Location = New System.Drawing.Point(501, 54)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 22)
-        Me.Label1.TabIndex = 39
+        Me.Label1.TabIndex = 64
         Me.Label1.Text = "Customer"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(11, 36)
+        Me.Label2.Location = New System.Drawing.Point(9, 13)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(228, 28)
-        Me.Label2.TabIndex = 38
-        Me.Label2.Text = "PO - Approval Admin"
+        Me.Label2.Size = New System.Drawing.Size(201, 28)
+        Me.Label2.TabIndex = 63
+        Me.Label2.Text = "PO - Penyelesaian"
         '
-        'Label4
+        'TxtLogistic
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(523, 124)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(114, 22)
-        Me.Label4.TabIndex = 59
-        Me.Label4.Text = "Pembayaran"
+        Me.TxtLogistic.Enabled = False
+        Me.TxtLogistic.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtLogistic.Location = New System.Drawing.Point(165, 95)
+        Me.TxtLogistic.Name = "TxtLogistic"
+        Me.TxtLogistic.Size = New System.Drawing.Size(267, 31)
+        Me.TxtLogistic.TabIndex = 78
         '
-        'TxtPayment
+        'TxtPaymentFinal
         '
-        Me.TxtPayment.Enabled = False
-        Me.TxtPayment.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtPayment.Location = New System.Drawing.Point(637, 119)
-        Me.TxtPayment.Name = "TxtPayment"
-        Me.TxtPayment.Size = New System.Drawing.Size(309, 31)
-        Me.TxtPayment.TabIndex = 60
+        Me.TxtPaymentFinal.Enabled = False
+        Me.TxtPaymentFinal.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtPaymentFinal.Location = New System.Drawing.Point(665, 163)
+        Me.TxtPaymentFinal.Name = "TxtPaymentFinal"
+        Me.TxtPaymentFinal.Size = New System.Drawing.Size(279, 31)
+        Me.TxtPaymentFinal.TabIndex = 80
         '
-        'TxtCustomer
+        'Label5
         '
-        Me.TxtCustomer.Enabled = False
-        Me.TxtCustomer.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtCustomer.Location = New System.Drawing.Point(637, 72)
-        Me.TxtCustomer.Name = "TxtCustomer"
-        Me.TxtCustomer.Size = New System.Drawing.Size(309, 31)
-        Me.TxtCustomer.TabIndex = 61
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(501, 168)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(158, 22)
+        Me.Label5.TabIndex = 79
+        Me.Label5.Text = "Pembayaran Final"
         '
-        'BtnClear
-        '
-        Me.BtnClear.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.BtnClear.IconChar = FontAwesome.Sharp.IconChar.TimesCircle
-        Me.BtnClear.IconColor = System.Drawing.Color.Black
-        Me.BtnClear.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BtnClear.IconSize = 30
-        Me.BtnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnClear.Location = New System.Drawing.Point(732, 555)
-        Me.BtnClear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(104, 32)
-        Me.BtnClear.TabIndex = 62
-        Me.BtnClear.Text = "    Close"
-        Me.BtnClear.UseVisualStyleBackColor = True
-        '
-        'PurchaseOrderApprovalAdminForm
+        'PurchaseOrderFinishForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(956, 598)
+        Me.Controls.Add(Me.TxtPaymentFinal)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.TxtLogistic)
         Me.Controls.Add(Me.BtnClear)
         Me.Controls.Add(Me.TxtCustomer)
         Me.Controls.Add(Me.TxtPayment)
@@ -283,16 +313,19 @@ Partial Class PurchaseOrderApprovalAdminForm
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.CmbLogistic)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
-        Me.Name = "PurchaseOrderApprovalAdminForm"
-        Me.Text = "PO - Approval Admin"
+        Me.Name = "PurchaseOrderFinishForm"
+        Me.Text = "PO - Penyelesaian"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents BtnClear As FontAwesome.Sharp.IconButton
+    Friend WithEvents TxtCustomer As TextBox
+    Friend WithEvents TxtPayment As TextBox
+    Friend WithEvents Label4 As Label
     Friend WithEvents TxtCode As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label7 As Label
@@ -301,14 +334,13 @@ Partial Class PurchaseOrderApprovalAdminForm
     Friend WithEvents Label6 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
-    Friend WithEvents CmbLogistic As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TxtPayment As TextBox
-    Friend WithEvents TxtCustomer As TextBox
-    Friend WithEvents BtnClear As FontAwesome.Sharp.IconButton
+    Friend WithEvents TxtLogistic As TextBox
+    Friend WithEvents TxtPaymentFinal As TextBox
+    Friend WithEvents Label5 As Label
     Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents is_fullfiled As DataGridViewTextBoxColumn
     Friend WithEvents item_code As DataGridViewTextBoxColumn
     Friend WithEvents item_name As DataGridViewTextBoxColumn
     Friend WithEvents item_uom As DataGridViewTextBoxColumn

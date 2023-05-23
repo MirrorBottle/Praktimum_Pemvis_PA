@@ -5,7 +5,7 @@ Public Class Login
             Dim Credentials = UserHelper.GetCredentials()
             Select Case Credentials.userRole
                 Case "1"
-                    PurchaseOrderApprovalAdminListForm.ShowDialog()
+                    AdminDashboardForm.ShowDialog()
                 Case "2"
                     LogisticDashboardForm.ShowDialog()
                 Case "3"

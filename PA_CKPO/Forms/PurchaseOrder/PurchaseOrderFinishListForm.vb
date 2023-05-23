@@ -1,11 +1,11 @@
-﻿Public Class PurchaseOrderApprovalAdminListForm
+﻿Public Class PurchaseOrderFinishListForm
     Public Sub LoadData(Optional Keyword As String = Nothing)
-        DataGridView1.DataSource = QueryHelper.PurchaseOrderAdminApprovalList(Keyword)
+        DataGridView1.DataSource = QueryHelper.PurchaseOrderFinishList(Keyword)
         DataGridView1.ReadOnly = False
         DataGridView1.Refresh()
     End Sub
 
-    Private Sub UserListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub PurchaseOrderFinishListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BtnApprove.Enabled = False
         Me.LoadData()
     End Sub
@@ -31,7 +31,7 @@
 
     Private Sub BtnApprove_Click(sender As Object, e As EventArgs) Handles BtnApprove.Click
         Dim row As DataGridViewRow = DataGridView1.Rows(DataGridView1.CurrentRow.Index)
-        PurchaseOrderApprovalAdminForm.LoadData(row.Cells(0).Value)
-        PurchaseOrderApprovalAdminForm.ShowDialog()
+        PurchaseOrderFinishForm.LoadData(row.Cells(0).Value)
+        PurchaseOrderFinishForm.ShowDialog()
     End Sub
 End Class

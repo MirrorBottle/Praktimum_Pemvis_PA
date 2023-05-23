@@ -49,7 +49,7 @@ Partial Class PurchaseOrderApprovalAdminListForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(10, 28)
+        Me.Label2.Location = New System.Drawing.Point(12, 43)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(228, 28)
         Me.Label2.TabIndex = 18
@@ -65,7 +65,7 @@ Partial Class PurchaseOrderApprovalAdminListForm
         Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnRefresh.IconSize = 25
         Me.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRefresh.Location = New System.Drawing.Point(774, 60)
+        Me.btnRefresh.Location = New System.Drawing.Point(776, 75)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(78, 30)
         Me.btnRefresh.TabIndex = 17
@@ -79,7 +79,7 @@ Partial Class PurchaseOrderApprovalAdminListForm
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.code, Me.customer_name, Me.items_total, Me.total_amount})
-        Me.DataGridView1.Location = New System.Drawing.Point(10, 96)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 111)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
@@ -135,7 +135,7 @@ Partial Class PurchaseOrderApprovalAdminListForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(10, 65)
+        Me.Label1.Location = New System.Drawing.Point(12, 80)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 22)
         Me.Label1.TabIndex = 15
@@ -144,6 +144,7 @@ Partial Class PurchaseOrderApprovalAdminListForm
         'BtnApprove
         '
         Me.BtnApprove.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BtnApprove.Enabled = False
         Me.BtnApprove.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnApprove.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.BtnApprove.IconChar = FontAwesome.Sharp.IconChar.CheckCircle
@@ -151,7 +152,7 @@ Partial Class PurchaseOrderApprovalAdminListForm
         Me.BtnApprove.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BtnApprove.IconSize = 25
         Me.BtnApprove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnApprove.Location = New System.Drawing.Point(858, 60)
+        Me.BtnApprove.Location = New System.Drawing.Point(860, 75)
         Me.BtnApprove.Name = "BtnApprove"
         Me.BtnApprove.Size = New System.Drawing.Size(89, 30)
         Me.BtnApprove.TabIndex = 12
@@ -162,7 +163,7 @@ Partial Class PurchaseOrderApprovalAdminListForm
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCari.Location = New System.Drawing.Point(67, 62)
+        Me.txtCari.Location = New System.Drawing.Point(69, 77)
         Me.txtCari.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(678, 28)

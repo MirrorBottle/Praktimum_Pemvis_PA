@@ -75,12 +75,38 @@
         Return Datatable
     End Function
 
+    Public Function PurchaseOrderItemFinishList(id As String) As DataTable
+        Dim Query As String = $"SELECT
+            purchase_order_items.id,
+            items.code as item_code,
+            CASE purchase_order_items.is_fulfilled
+                WHEN 1 THEN 'Tersedia'
+                WHEN 2 THEN 'Tidak Tersedia'
+                ELSE 'Pending'
+            END AS is_fulfilled,
+            CONCAT(items.name, ' - ', items.brand, ' - ', items.color) as item_name,
+            items.uom as item_uom,
+            suppliers.name as supplier_name,
+            REPLACE(FORMAT(CAST(purchase_order_items.price_request / purchase_order_items.amount_request AS DECIMAL), 0), ',', '.') as item_price,
+            purchase_order_items.amount_request,
+            REPLACE(FORMAT(CAST(purchase_order_items.price_request AS DECIMAL), 0), ',', '.') as price_request
+        FROM purchase_order_items
+        JOIN purchase_orders ON purchase_order_items.purchase_order_id=purchase_orders.id
+        JOIN items ON purchase_order_items.item_id=items.id
+        JOIN suppliers ON items.supplier_id=suppliers.id
+        WHERE purchase_order_items.purchase_order_id={id}"
+        Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
+        Return Datatable
+    End Function
+
     Public Function PurchaseOrderDetail(id As String) As DataRow
         Dim Query As String = $"SELECT
             purchase_orders.*,
-            customers.name as customer_name
+            customers.name as customer_name,
+            users.name as logistic_name
         FROM purchase_orders
         JOIN customers ON purchase_orders.customer_id=customers.id
+        JOIN users ON purchase_orders.logistic_id=users.id
         WHERE purchase_orders.id={id}"
 
         Dim DataRow As DataRow = SqlHelper.FindRecord(Query)
@@ -88,24 +114,75 @@
     End Function
 
     Public Function PurchaseOrderLogisticApprovalList(Optional Keyword As String = Nothing, Optional logisticId As String = Nothing) As DataTable
-        Dim Query As String = $"SELECT
-            purchase_orders.id,
-            purchase_orders.code,
-            customers.name as customer_name,
-            REPLACE(FORMAT(CAST(purchase_orders.total_amount AS DECIMAL), 0), ',', '.') as total_amount,
-            (
-                SELECT COUNT(*) 
-                FROM purchase_order_items 
-                WHERE purchase_order_items.purchase_order_id = purchase_orders.id
-            ) AS items_total
-        FROM purchase_orders
-        JOIN customers ON purchase_orders.customer_id=customers.id"
+        Dim Query As String
+
+        If logisticId IsNot Nothing Then
+            Query = $"SELECT
+                purchase_orders.id,
+                purchase_orders.code,
+                customers.name as customer_name,
+                REPLACE(FORMAT(CAST(purchase_orders.total_amount AS DECIMAL), 0), ',', '.') as total_amount,
+                (
+                    SELECT COUNT(*) 
+                    FROM purchase_order_items 
+                    WHERE purchase_order_items.purchase_order_id = purchase_orders.id
+                ) AS items_total
+            FROM purchase_orders
+            JOIN customers ON purchase_orders.customer_id=customers.id"
+        Else
+            Query = $"SELECT
+                purchase_orders.id,
+                purchase_orders.code,
+                customers.name as customer_name,
+                users.name as logistic_name,
+                REPLACE(FORMAT(CAST(purchase_orders.total_amount AS DECIMAL), 0), ',', '.') as total_amount,
+                (
+                    SELECT COUNT(*) 
+                    FROM purchase_order_items 
+                    WHERE purchase_order_items.purchase_order_id = purchase_orders.id
+                ) AS items_total
+            FROM purchase_orders
+            JOIN customers ON purchase_orders.customer_id=customers.id
+            JOIN users ON purchase_orders.logistic_id=users.id"
+        End If
+
         If Keyword IsNot Nothing Then
             Query &= $" WHERE purchase_orders.code LIKE '%{Keyword}%' AND status=1 ORDER BY purchase_orders.id DESC"
         ElseIf logisticId IsNot Nothing Then
             Query &= $" WHERE purchase_orders.logistic_id={logisticId} AND status=1 ORDER BY purchase_orders.id DESC"
         Else
             Query &= $" WHERE status=1 ORDER BY purchase_orders.id DESC"
+        End If
+        Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
+        Return Datatable
+    End Function
+
+    Public Function PurchaseOrderFinishList(Optional Keyword As String = Nothing) As DataTable
+        Dim Query As String = $"SELECT
+            purchase_orders.id,
+            purchase_orders.code,
+            customers.name as customer_name,
+            users.name as logistic_name,
+            (
+                SELECT COUNT(*) 
+                FROM purchase_order_items 
+                WHERE purchase_order_items.purchase_order_id = purchase_orders.id
+            ) AS items_total,
+            (
+                SELECT COUNT(*) 
+                FROM purchase_order_items 
+                WHERE purchase_order_items.purchase_order_id = purchase_orders.id AND is_fulfilled=1
+            ) AS items_total_fulfilled,
+            REPLACE(FORMAT(CAST(purchase_orders.total_amount AS DECIMAL), 0), ',', '.') as total_amount,
+            REPLACE(FORMAT(CAST(purchase_orders.payed_amount AS DECIMAL), 0), ',', '.') as payed_amount
+        FROM purchase_orders
+        JOIN customers ON purchase_orders.customer_id=customers.id
+        JOIN users ON purchase_orders.logistic_id=users.id"
+
+        If Keyword IsNot Nothing Then
+            Query &= $" WHERE purchase_orders.code LIKE '%{Keyword}%' AND status=2 ORDER BY purchase_orders.id DESC"
+        Else
+            Query &= $" WHERE status=2 ORDER BY purchase_orders.id DESC"
         End If
         Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
         Return Datatable
