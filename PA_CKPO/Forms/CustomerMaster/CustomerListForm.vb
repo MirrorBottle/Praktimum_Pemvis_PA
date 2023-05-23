@@ -27,18 +27,18 @@
 
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        UserForm.Show()
+        CustomerForm.Show()
     End Sub
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Dim row As DataGridViewRow = DataGridView1.Rows(DataGridView1.CurrentRow.Index)
-        UserDetailForm.ShowDialog()
+        CustomerDetailForm.ShowDialog()
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         Dim row As DataGridViewRow = DataGridView1.Rows(DataGridView1.CurrentRow.Index)
-        UserForm.FormLoadEdit(row)
-        UserForm.ShowDialog()
+        CustomerForm.CustomerFormLoadEdit(row.Cells(0).Value)
+        CustomerForm.ShowDialog()
     End Sub
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
@@ -50,5 +50,9 @@
             Helper.ShowMessage("Data berhasil dihapus", "Success")
             Me.LoadData()
         End If
+    End Sub
+
+    Private Sub NavbarControl1_Load(sender As Object, e As EventArgs) Handles NavbarControl1.Load
+
     End Sub
 End Class
