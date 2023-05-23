@@ -236,6 +236,23 @@
         Return Datatable
     End Function
 
+<<<<<<< HEAD
+    Public Function ItemList(Optional Keyword As String = Nothing) As DataTable
+        Dim Query As String = $"SELECT
+            items.id,
+            items.code,
+            items.name,
+            REPLACE(FORMAT(CAST(items.price AS DECIMAL), 0), ',', '.') as price,
+            items.category,
+            items.color,
+            items.brand,
+            items.uom,
+            suppliers.name as supplier_name
+        FROM items
+        JOIN suppliers ON items.supplier_id=suppliers.id"
+        If Keyword IsNot Nothing Then
+            Query &= $" WHERE items.name LIKE '%{Keyword}%'"
+=======
     Public Function CustomerList(Optional Keyword As String = Nothing) As DataTable
         Dim Query As String = $"SELECT
                 customers.id,
@@ -246,6 +263,7 @@
             FROM customers"
         If Keyword IsNot Nothing Then
             Query &= $" WHERE name LIKE '%{Keyword}%'"
+>>>>>>> fe24010290914eaef6d36e1db87594e66b66ea9e
         End If
         Query &= $" ORDER BY id DESC"
         Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)

@@ -22,9 +22,7 @@ Partial Class ItemForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        PictureBox1 = New PictureBox()
-        Btn_Back = New FontAwesome.Sharp.IconButton()
+        LabelHeader = New Label()
         CmbSupplier = New ComboBox()
         CmbCategory = New ComboBox()
         IconButton2 = New FontAwesome.Sharp.IconButton()
@@ -44,45 +42,22 @@ Partial Class ItemForm
         Label10 = New Label()
         Label11 = New Label()
         Label7 = New Label()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Label1
+        ' LabelHeader
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Roboto", 16.8000011F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(15, 87)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(142, 35)
-        Label1.TabIndex = 0
-        Label1.Text = "ItemForm"' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = Resources.Resources.logo
-        PictureBox1.Location = New Point(12, 5)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(154, 74)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 17
-        PictureBox1.TabStop = False
-        ' 
-        ' Btn_Back
-        ' 
-        Btn_Back.IconChar = FontAwesome.Sharp.IconChar.LeftLong
-        Btn_Back.IconColor = Color.Black
-        Btn_Back.IconFont = FontAwesome.Sharp.IconFont.Auto
-        Btn_Back.IconSize = 40
-        Btn_Back.Location = New Point(780, 87)
-        Btn_Back.Name = "Btn_Back"
-        Btn_Back.Size = New Size(119, 42)
-        Btn_Back.TabIndex = 19
-        Btn_Back.UseVisualStyleBackColor = True
-        ' 
+        LabelHeader.AutoSize = True
+        LabelHeader.Font = New Font("Roboto", 16.8000011F, FontStyle.Bold, GraphicsUnit.Point)
+        LabelHeader.Location = New Point(15, 26)
+        LabelHeader.Name = "LabelHeader"
+        LabelHeader.Size = New Size(142, 35)
+        LabelHeader.TabIndex = 0
+        LabelHeader.Text = "ItemForm"' 
         ' CmbSupplier
         ' 
         CmbSupplier.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
         CmbSupplier.FormattingEnabled = True
-        CmbSupplier.Location = New Point(616, 313)
+        CmbSupplier.Location = New Point(616, 242)
         CmbSupplier.Name = "CmbSupplier"
         CmbSupplier.Size = New Size(283, 35)
         CmbSupplier.TabIndex = 31
@@ -92,7 +67,7 @@ Partial Class ItemForm
         CmbCategory.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
         CmbCategory.FormattingEnabled = True
         CmbCategory.Items.AddRange(New Object() {"1. Admin", "2. logistics", "3. Customer"})
-        CmbCategory.Location = New Point(151, 313)
+        CmbCategory.Location = New Point(151, 242)
         CmbCategory.Name = "CmbCategory"
         CmbCategory.Size = New Size(283, 35)
         CmbCategory.TabIndex = 30
@@ -106,7 +81,7 @@ Partial Class ItemForm
         IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
         IconButton2.IconSize = 30
         IconButton2.ImageAlign = ContentAlignment.MiddleLeft
-        IconButton2.Location = New Point(780, 428)
+        IconButton2.Location = New Point(780, 331)
         IconButton2.Name = "IconButton2"
         IconButton2.Size = New Size(119, 42)
         IconButton2.TabIndex = 29
@@ -122,7 +97,7 @@ Partial Class ItemForm
         IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
         IconButton1.IconSize = 30
         IconButton1.ImageAlign = ContentAlignment.MiddleLeft
-        IconButton1.Location = New Point(640, 428)
+        IconButton1.Location = New Point(640, 331)
         IconButton1.Name = "IconButton1"
         IconButton1.Size = New Size(119, 42)
         IconButton1.TabIndex = 28
@@ -132,7 +107,7 @@ Partial Class ItemForm
         ' TxtPrice
         ' 
         TxtPrice.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtPrice.Location = New Point(206, 262)
+        TxtPrice.Location = New Point(206, 191)
         TxtPrice.Name = "TxtPrice"
         TxtPrice.Size = New Size(228, 34)
         TxtPrice.TabIndex = 27
@@ -140,7 +115,7 @@ Partial Class ItemForm
         ' TxtName
         ' 
         TxtName.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtName.Location = New Point(151, 209)
+        TxtName.Location = New Point(151, 138)
         TxtName.Name = "TxtName"
         TxtName.Size = New Size(283, 34)
         TxtName.TabIndex = 26
@@ -148,7 +123,7 @@ Partial Class ItemForm
         ' TxtCode
         ' 
         TxtCode.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtCode.Location = New Point(151, 156)
+        TxtCode.Location = New Point(151, 85)
         TxtCode.Name = "TxtCode"
         TxtCode.Size = New Size(283, 34)
         TxtCode.TabIndex = 25
@@ -157,7 +132,7 @@ Partial Class ItemForm
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.Location = New Point(480, 153)
+        Label5.Location = New Point(480, 82)
         Label5.Name = "Label5"
         Label5.Size = New Size(79, 28)
         Label5.TabIndex = 24
@@ -166,7 +141,7 @@ Partial Class ItemForm
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(15, 156)
+        Label2.Location = New Point(15, 85)
         Label2.Name = "Label2"
         Label2.Size = New Size(64, 28)
         Label2.TabIndex = 20
@@ -175,7 +150,7 @@ Partial Class ItemForm
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(15, 313)
+        Label4.Location = New Point(15, 242)
         Label4.Name = "Label4"
         Label4.Size = New Size(99, 28)
         Label4.TabIndex = 23
@@ -184,7 +159,7 @@ Partial Class ItemForm
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(15, 262)
+        Label3.Location = New Point(15, 191)
         Label3.Name = "Label3"
         Label3.Size = New Size(75, 28)
         Label3.TabIndex = 22
@@ -193,7 +168,7 @@ Partial Class ItemForm
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label6.Location = New Point(15, 209)
+        Label6.Location = New Point(15, 138)
         Label6.Name = "Label6"
         Label6.Size = New Size(74, 28)
         Label6.TabIndex = 21
@@ -201,7 +176,7 @@ Partial Class ItemForm
         ' TxtColor
         ' 
         TxtColor.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtColor.Location = New Point(616, 150)
+        TxtColor.Location = New Point(616, 79)
         TxtColor.Name = "TxtColor"
         TxtColor.PasswordChar = "*"c
         TxtColor.Size = New Size(283, 34)
@@ -210,7 +185,7 @@ Partial Class ItemForm
         ' TxtUom
         ' 
         TxtUom.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtUom.Location = New Point(616, 261)
+        TxtUom.Location = New Point(616, 190)
         TxtUom.Name = "TxtUom"
         TxtUom.Size = New Size(283, 34)
         TxtUom.TabIndex = 38
@@ -218,7 +193,7 @@ Partial Class ItemForm
         ' TxtBrand
         ' 
         TxtBrand.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        TxtBrand.Location = New Point(616, 208)
+        TxtBrand.Location = New Point(616, 137)
         TxtBrand.Name = "TxtBrand"
         TxtBrand.Size = New Size(283, 34)
         TxtBrand.TabIndex = 37
@@ -227,7 +202,7 @@ Partial Class ItemForm
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label8.Location = New Point(480, 208)
+        Label8.Location = New Point(480, 137)
         Label8.Name = "Label8"
         Label8.Size = New Size(64, 28)
         Label8.TabIndex = 32
@@ -236,7 +211,7 @@ Partial Class ItemForm
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label10.Location = New Point(480, 314)
+        Label10.Location = New Point(480, 243)
         Label10.Name = "Label10"
         Label10.Size = New Size(97, 28)
         Label10.TabIndex = 34
@@ -245,7 +220,7 @@ Partial Class ItemForm
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        Label11.Location = New Point(480, 261)
+        Label11.Location = New Point(480, 190)
         Label11.Name = "Label11"
         Label11.Size = New Size(86, 28)
         Label11.TabIndex = 33
@@ -255,7 +230,7 @@ Partial Class ItemForm
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Roboto", 15F, FontStyle.Regular, GraphicsUnit.Point)
-        Label7.Location = New Point(151, 265)
+        Label7.Location = New Point(151, 194)
         Label7.Name = "Label7"
         Label7.Size = New Size(49, 30)
         Label7.TabIndex = 40
@@ -264,7 +239,7 @@ Partial Class ItemForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(922, 493)
+        ClientSize = New Size(922, 395)
         Controls.Add(Label7)
         Controls.Add(TxtColor)
         Controls.Add(TxtUom)
@@ -284,19 +259,14 @@ Partial Class ItemForm
         Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(Label6)
-        Controls.Add(Btn_Back)
-        Controls.Add(PictureBox1)
-        Controls.Add(Label1)
+        Controls.Add(LabelHeader)
         Name = "ItemForm"
-        Text = "ItemForm"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Text = "Form Barang"
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Btn_Back As FontAwesome.Sharp.IconButton
+    Friend WithEvents LabelHeader As Label
     Friend WithEvents CmbSupplier As ComboBox
     Friend WithEvents CmbCategory As ComboBox
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
