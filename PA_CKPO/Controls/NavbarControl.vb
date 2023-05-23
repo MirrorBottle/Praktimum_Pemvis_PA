@@ -96,6 +96,9 @@ Public Class NavbarControl
             Case "CustomerItem"
                 ItemListForm.Show()
                 ItemListForm.Activate()
+            Case "Profil"
+                Profil.Show()
+                Profil.Activate()
             Case "Logout"
                 Dim result As DialogResult = MessageBox.Show("Apa anda ingin logout?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then

@@ -24,7 +24,6 @@ Partial Class ItemForm
     Private Sub InitializeComponent()
         LabelHeader = New Label()
         CmbSupplier = New ComboBox()
-        CmbCategory = New ComboBox()
         IconButton2 = New FontAwesome.Sharp.IconButton()
         IconButton1 = New FontAwesome.Sharp.IconButton()
         TxtPrice = New TextBox()
@@ -42,6 +41,7 @@ Partial Class ItemForm
         Label10 = New Label()
         Label11 = New Label()
         Label7 = New Label()
+        TxtCategory = New TextBox()
         SuspendLayout()
         ' 
         ' LabelHeader
@@ -50,9 +50,9 @@ Partial Class ItemForm
         LabelHeader.Font = New Font("Roboto", 16.8000011F, FontStyle.Bold, GraphicsUnit.Point)
         LabelHeader.Location = New Point(15, 26)
         LabelHeader.Name = "LabelHeader"
-        LabelHeader.Size = New Size(142, 35)
+        LabelHeader.Size = New Size(222, 35)
         LabelHeader.TabIndex = 0
-        LabelHeader.Text = "ItemForm"' 
+        LabelHeader.Text = "Tambah Barang"' 
         ' CmbSupplier
         ' 
         CmbSupplier.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
@@ -61,16 +61,6 @@ Partial Class ItemForm
         CmbSupplier.Name = "CmbSupplier"
         CmbSupplier.Size = New Size(283, 35)
         CmbSupplier.TabIndex = 31
-        ' 
-        ' CmbCategory
-        ' 
-        CmbCategory.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
-        CmbCategory.FormattingEnabled = True
-        CmbCategory.Items.AddRange(New Object() {"1. Admin", "2. logistics", "3. Customer"})
-        CmbCategory.Location = New Point(151, 242)
-        CmbCategory.Name = "CmbCategory"
-        CmbCategory.Size = New Size(283, 35)
-        CmbCategory.TabIndex = 30
         ' 
         ' IconButton2
         ' 
@@ -178,7 +168,6 @@ Partial Class ItemForm
         TxtColor.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
         TxtColor.Location = New Point(616, 79)
         TxtColor.Name = "TxtColor"
-        TxtColor.PasswordChar = "*"c
         TxtColor.Size = New Size(283, 34)
         TxtColor.TabIndex = 39
         ' 
@@ -235,11 +224,20 @@ Partial Class ItemForm
         Label7.Size = New Size(49, 30)
         Label7.TabIndex = 40
         Label7.Text = "Rp."' 
+        ' TxtCategory
+        ' 
+        TxtCategory.Font = New Font("Roboto", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point)
+        TxtCategory.Location = New Point(151, 243)
+        TxtCategory.Name = "TxtCategory"
+        TxtCategory.Size = New Size(283, 34)
+        TxtCategory.TabIndex = 41
+        ' 
         ' ItemForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(922, 395)
+        Controls.Add(TxtCategory)
         Controls.Add(Label7)
         Controls.Add(TxtColor)
         Controls.Add(TxtUom)
@@ -248,7 +246,6 @@ Partial Class ItemForm
         Controls.Add(Label10)
         Controls.Add(Label11)
         Controls.Add(CmbSupplier)
-        Controls.Add(CmbCategory)
         Controls.Add(IconButton2)
         Controls.Add(IconButton1)
         Controls.Add(TxtPrice)
@@ -268,7 +265,6 @@ Partial Class ItemForm
 
     Friend WithEvents LabelHeader As Label
     Friend WithEvents CmbSupplier As ComboBox
-    Friend WithEvents CmbCategory As ComboBox
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents TxtPrice As TextBox
@@ -286,4 +282,5 @@ Partial Class ItemForm
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents TxtCategory As TextBox
 End Class

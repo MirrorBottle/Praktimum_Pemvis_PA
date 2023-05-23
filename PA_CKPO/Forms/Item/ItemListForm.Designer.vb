@@ -26,11 +26,6 @@ Partial Class ItemListForm
         Label2 = New Label()
         btnRefresh = New FontAwesome.Sharp.IconButton()
         DataGridView1 = New DataGridView()
-        Label1 = New Label()
-        btnEdit = New FontAwesome.Sharp.IconButton()
-        btnHapus = New FontAwesome.Sharp.IconButton()
-        btnTambah = New FontAwesome.Sharp.IconButton()
-        txtCari = New TextBox()
         id = New DataGridViewTextBoxColumn()
         code = New DataGridViewTextBoxColumn()
         item_name = New DataGridViewTextBoxColumn()
@@ -40,6 +35,11 @@ Partial Class ItemListForm
         brand = New DataGridViewTextBoxColumn()
         uom = New DataGridViewTextBoxColumn()
         supplier_name = New DataGridViewTextBoxColumn()
+        Label1 = New Label()
+        btnEdit = New FontAwesome.Sharp.IconButton()
+        btnHapus = New FontAwesome.Sharp.IconButton()
+        btnTambah = New FontAwesome.Sharp.IconButton()
+        txtCari = New TextBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -92,6 +92,87 @@ Partial Class ItemListForm
         DataGridView1.RowTemplate.Height = 25
         DataGridView1.Size = New Size(1071, 479)
         DataGridView1.TabIndex = 16
+        ' 
+        ' id
+        ' 
+        id.DataPropertyName = "id"
+        id.HeaderText = "ID"
+        id.MinimumWidth = 6
+        id.Name = "id"
+        id.ReadOnly = True
+        id.Width = 50
+        ' 
+        ' code
+        ' 
+        code.DataPropertyName = "code"
+        code.HeaderText = "Kode"
+        code.MinimumWidth = 6
+        code.Name = "code"
+        code.ReadOnly = True
+        code.Width = 70
+        ' 
+        ' item_name
+        ' 
+        item_name.DataPropertyName = "name"
+        item_name.HeaderText = "Nama"
+        item_name.MinimumWidth = 6
+        item_name.Name = "item_name"
+        item_name.ReadOnly = True
+        item_name.Width = 150
+        ' 
+        ' price
+        ' 
+        price.DataPropertyName = "price"
+        price.HeaderText = "Harga"
+        price.MinimumWidth = 6
+        price.Name = "price"
+        price.ReadOnly = True
+        price.Width = 110
+        ' 
+        ' category
+        ' 
+        category.DataPropertyName = "category"
+        category.HeaderText = "Kategori"
+        category.MinimumWidth = 6
+        category.Name = "category"
+        category.ReadOnly = True
+        category.Width = 150
+        ' 
+        ' color
+        ' 
+        color.DataPropertyName = "color"
+        color.HeaderText = "Warna"
+        color.MinimumWidth = 6
+        color.Name = "color"
+        color.ReadOnly = True
+        color.Width = 125
+        ' 
+        ' brand
+        ' 
+        brand.DataPropertyName = "brand"
+        brand.HeaderText = "Merk"
+        brand.MinimumWidth = 6
+        brand.Name = "brand"
+        brand.ReadOnly = True
+        brand.Width = 125
+        ' 
+        ' uom
+        ' 
+        uom.DataPropertyName = "uom"
+        uom.HeaderText = "Satuan"
+        uom.MinimumWidth = 6
+        uom.Name = "uom"
+        uom.ReadOnly = True
+        uom.Width = 120
+        ' 
+        ' supplier_name
+        ' 
+        supplier_name.DataPropertyName = "supplier_name"
+        supplier_name.HeaderText = "supplier"
+        supplier_name.MinimumWidth = 6
+        supplier_name.Name = "supplier_name"
+        supplier_name.ReadOnly = True
+        supplier_name.Width = 150
         ' 
         ' Label1
         ' 
@@ -169,85 +250,6 @@ Partial Class ItemListForm
         txtCari.Name = "txtCari"
         txtCari.Size = New Size(606, 34)
         txtCari.TabIndex = 11
-        ' 
-        ' id
-        ' 
-        id.DataPropertyName = "id"
-        id.HeaderText = "ID"
-        id.MinimumWidth = 6
-        id.Name = "id"
-        id.ReadOnly = True
-        id.Width = 50
-        ' 
-        ' code
-        ' 
-        code.DataPropertyName = "code"
-        code.HeaderText = "Kode"
-        code.MinimumWidth = 6
-        code.Name = "code"
-        code.ReadOnly = True
-        code.Width = 70
-        ' 
-        ' item_name
-        ' 
-        item_name.DataPropertyName = "name"
-        item_name.HeaderText = "Nama"
-        item_name.MinimumWidth = 6
-        item_name.Name = "item_name"
-        item_name.ReadOnly = True
-        item_name.Width = 150
-        ' 
-        ' price
-        ' 
-        price.DataPropertyName = "price"
-        price.HeaderText = "Harga"
-        price.MinimumWidth = 6
-        price.Name = "price"
-        price.ReadOnly = True
-        price.Width = 110
-        ' 
-        ' category
-        ' 
-        category.DataPropertyName = "category"
-        category.HeaderText = "Kategori"
-        category.MinimumWidth = 6
-        category.Name = "category"
-        category.ReadOnly = True
-        category.Width = 150
-        ' 
-        ' color
-        ' 
-        color.DataPropertyName = "color"
-        color.HeaderText = "Warna"
-        color.MinimumWidth = 6
-        color.Name = "color"
-        color.ReadOnly = True
-        ' 
-        ' brand
-        ' 
-        brand.DataPropertyName = "brand"
-        brand.HeaderText = "Merk"
-        brand.MinimumWidth = 6
-        brand.Name = "brand"
-        brand.ReadOnly = True
-        ' 
-        ' uom
-        ' 
-        uom.DataPropertyName = "uom"
-        uom.HeaderText = "Satuan"
-        uom.MinimumWidth = 6
-        uom.Name = "uom"
-        uom.ReadOnly = True
-        uom.Width = 120
-        ' 
-        ' supplier_name
-        ' 
-        supplier_name.DataPropertyName = "supplier_name"
-        supplier_name.HeaderText = "supplier"
-        supplier_name.MinimumWidth = 6
-        supplier_name.Name = "supplier_name"
-        supplier_name.ReadOnly = True
-        supplier_name.Width = 150
         ' 
         ' ItemListForm
         ' 

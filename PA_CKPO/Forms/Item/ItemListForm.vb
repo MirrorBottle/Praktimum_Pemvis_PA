@@ -16,7 +16,7 @@ Public Class ItemListForm
         Me.LoadData()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         btnEdit.Enabled = True
         btnHapus.Enabled = True
     End Sub
@@ -27,12 +27,12 @@ Public Class ItemListForm
         End If
     End Sub
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        UserForm.Show()
+        ItemForm.Show()
     End Sub
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         Dim row As DataGridViewRow = DataGridView1.Rows(DataGridView1.CurrentRow.Index)
-        UserForm.FormLoadEdit(row)
-        UserForm.ShowDialog()
+        ItemForm.FormLoadEdit(row.Cells(0).Value)
+        ItemForm.ShowDialog()
     End Sub
 
     Private Sub btnHapus_Click_1(sender As Object, e As EventArgs) Handles btnHapus.Click
