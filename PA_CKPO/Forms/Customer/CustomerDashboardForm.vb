@@ -14,4 +14,8 @@
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         PurchaseOrderForm.ShowDialog()
     End Sub
+
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        Me.LoadData()
+    End Sub
 End Class

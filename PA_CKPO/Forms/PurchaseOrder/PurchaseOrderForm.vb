@@ -139,8 +139,9 @@
             Next
 
             Helper.ShowMessage("Berhasil menambah PO", "Success")
-
+            CustomerDashboardForm.LoadData()
             Me.FormClear()
+            Me.Close()
         Else
             MsgBox("Mohon lengkapi isian anda!")
         End If

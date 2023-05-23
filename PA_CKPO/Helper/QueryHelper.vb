@@ -103,10 +103,10 @@
         Dim Query As String = $"SELECT
             purchase_orders.*,
             customers.name as customer_name,
-            users.name as logistic_name
+            COALESCE(users.name, 'N/A') as logistic_name
         FROM purchase_orders
         JOIN customers ON purchase_orders.customer_id=customers.id
-        JOIN users ON purchase_orders.logistic_id=users.id
+        LEFT JOIN users ON purchase_orders.logistic_id=users.id
         WHERE purchase_orders.id={id}"
 
         Dim DataRow As DataRow = SqlHelper.FindRecord(Query)
@@ -134,7 +134,7 @@
                 purchase_orders.id,
                 purchase_orders.code,
                 customers.name as customer_name,
-                users.name as logistic_name,
+                COALESCE(users.name, 'N/A') as logistic_name,
                 REPLACE(FORMAT(CAST(purchase_orders.total_amount AS DECIMAL), 0), ',', '.') as total_amount,
                 (
                     SELECT COUNT(*) 
@@ -143,7 +143,7 @@
                 ) AS items_total
             FROM purchase_orders
             JOIN customers ON purchase_orders.customer_id=customers.id
-            JOIN users ON purchase_orders.logistic_id=users.id"
+            LEFT JOIN users ON purchase_orders.logistic_id=users.id"
         End If
 
         If Keyword IsNot Nothing Then
@@ -199,7 +199,7 @@
                 WHEN 2 THEN 'Logistic Approved'
                 ELSE 'Selesai'
             END AS status,
-            users.name as logistic_name,
+            COALESCE(users.name, 'N/A') as logistic_name,
             (
                 SELECT COUNT(*) 
                 FROM purchase_order_items 
@@ -214,7 +214,7 @@
             COALESCE(REPLACE(FORMAT(CAST(purchase_orders.payed_amount AS DECIMAL), 0), ',', '.'), 'N/A') as payed_amount
         FROM purchase_orders
         JOIN customers ON purchase_orders.customer_id=customers.id
-        JOIN users ON purchase_orders.logistic_id=users.id
+        LEFT JOIN users ON purchase_orders.logistic_id=users.id
         "
 
         If Keyword IsNot Nothing Then
