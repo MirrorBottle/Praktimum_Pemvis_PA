@@ -64,6 +64,7 @@ Public Class NavbarControl
             Case 2 ' Logistic
                 MenuStrip1.Items.Add(New ToolStripMenuItem("Dashboard") With {.Name = "LogisticDashboard"})
                 MenuStrip1.Items.Add(New ToolStripMenuItem("Katalog") With {.Name = "LogisticItem"})
+                MenuStrip1.Items.Add(New ToolStripMenuItem("History PO") With {.Name = "LogisticPurchaseOrderHistory"})
 
             Case 3 ' Customer
                 MenuStrip1.Items.Add(New ToolStripMenuItem("Dashboard") With {.Name = "CustomerDashboard"})
@@ -90,6 +91,9 @@ Public Class NavbarControl
             Case "LogisticItem"
                 LogisticItemListForm.Show()
                 LogisticItemListForm.Activate()
+            Case "LogisticPurchaseOrderHistory"
+                LogisticPOListForm.Show()
+                LogisticPOListForm.Activate()
             Case "CustomerDashboard"
                 CustomerDashboardForm.Show()
                 CustomerDashboardForm.Activate()
