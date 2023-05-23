@@ -42,9 +42,9 @@ Partial Class UserForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(12, 73)
+        Me.Label1.Location = New System.Drawing.Point(14, 97)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 22)
+        Me.Label1.Size = New System.Drawing.Size(111, 27)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Username"
         '
@@ -52,9 +52,9 @@ Partial Class UserForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(12, 113)
+        Me.Label2.Location = New System.Drawing.Point(14, 151)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 22)
+        Me.Label2.Size = New System.Drawing.Size(71, 27)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Name"
         '
@@ -62,9 +62,9 @@ Partial Class UserForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(12, 153)
+        Me.Label3.Location = New System.Drawing.Point(14, 204)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 22)
+        Me.Label3.Size = New System.Drawing.Size(109, 27)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Password"
         '
@@ -72,9 +72,9 @@ Partial Class UserForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(12, 206)
+        Me.Label4.Location = New System.Drawing.Point(14, 275)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 22)
+        Me.Label4.Size = New System.Drawing.Size(115, 27)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Hak Akses"
         '
@@ -82,47 +82,44 @@ Partial Class UserForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(12, 247)
+        Me.Label5.Location = New System.Drawing.Point(14, 329)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 22)
+        Me.Label5.Size = New System.Drawing.Size(107, 27)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Customer"
         '
         'TxtUsername
         '
         Me.TxtUsername.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtUsername.Location = New System.Drawing.Point(131, 73)
-        Me.TxtUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtUsername.Location = New System.Drawing.Point(150, 97)
         Me.TxtUsername.Name = "TxtUsername"
-        Me.TxtUsername.Size = New System.Drawing.Size(498, 29)
+        Me.TxtUsername.Size = New System.Drawing.Size(569, 34)
         Me.TxtUsername.TabIndex = 6
         '
         'TxtName
         '
         Me.TxtName.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtName.Location = New System.Drawing.Point(131, 113)
-        Me.TxtName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtName.Location = New System.Drawing.Point(150, 151)
         Me.TxtName.Name = "TxtName"
-        Me.TxtName.Size = New System.Drawing.Size(498, 29)
+        Me.TxtName.Size = New System.Drawing.Size(569, 34)
         Me.TxtName.TabIndex = 7
         '
         'TxtPassword
         '
         Me.TxtPassword.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtPassword.Location = New System.Drawing.Point(131, 153)
-        Me.TxtPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtPassword.Location = New System.Drawing.Point(150, 204)
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPassword.Size = New System.Drawing.Size(498, 29)
+        Me.TxtPassword.Size = New System.Drawing.Size(569, 34)
         Me.TxtPassword.TabIndex = 8
         '
         'LabelHeader
         '
         Me.LabelHeader.AutoSize = True
         Me.LabelHeader.Font = New System.Drawing.Font("Roboto", 16.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelHeader.Location = New System.Drawing.Point(12, 24)
+        Me.LabelHeader.Location = New System.Drawing.Point(14, 32)
         Me.LabelHeader.Name = "LabelHeader"
-        Me.LabelHeader.Size = New System.Drawing.Size(204, 28)
+        Me.LabelHeader.Size = New System.Drawing.Size(251, 34)
         Me.LabelHeader.TabIndex = 11
         Me.LabelHeader.Text = "Tambah Pengguna"
         '
@@ -134,10 +131,9 @@ Partial Class UserForm
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 30
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(402, 288)
-        Me.IconButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.IconButton1.Location = New System.Drawing.Point(459, 384)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(104, 32)
+        Me.IconButton1.Size = New System.Drawing.Size(119, 43)
         Me.IconButton1.TabIndex = 12
         Me.IconButton1.Text = "    Clear"
         Me.IconButton1.UseVisualStyleBackColor = True
@@ -151,10 +147,9 @@ Partial Class UserForm
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton2.IconSize = 30
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(525, 288)
-        Me.IconButton2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.IconButton2.Location = New System.Drawing.Point(600, 384)
         Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(104, 32)
+        Me.IconButton2.Size = New System.Drawing.Size(119, 43)
         Me.IconButton2.TabIndex = 13
         Me.IconButton2.Text = "Submit"
         Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -165,10 +160,9 @@ Partial Class UserForm
         Me.CmbHakAkses.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.CmbHakAkses.FormattingEnabled = True
         Me.CmbHakAkses.Items.AddRange(New Object() {"Admin", "Logistik", "Customer"})
-        Me.CmbHakAkses.Location = New System.Drawing.Point(131, 206)
-        Me.CmbHakAkses.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CmbHakAkses.Location = New System.Drawing.Point(150, 275)
         Me.CmbHakAkses.Name = "CmbHakAkses"
-        Me.CmbHakAkses.Size = New System.Drawing.Size(498, 30)
+        Me.CmbHakAkses.Size = New System.Drawing.Size(569, 35)
         Me.CmbHakAkses.TabIndex = 14
         '
         'CmbCustomer
@@ -176,10 +170,9 @@ Partial Class UserForm
         Me.CmbCustomer.Enabled = False
         Me.CmbCustomer.Font = New System.Drawing.Font("Roboto", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.CmbCustomer.FormattingEnabled = True
-        Me.CmbCustomer.Location = New System.Drawing.Point(131, 249)
-        Me.CmbCustomer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CmbCustomer.Location = New System.Drawing.Point(150, 332)
         Me.CmbCustomer.Name = "CmbCustomer"
-        Me.CmbCustomer.Size = New System.Drawing.Size(498, 30)
+        Me.CmbCustomer.Size = New System.Drawing.Size(569, 35)
         Me.CmbCustomer.TabIndex = 15
         '
         'LabelPassword
@@ -187,18 +180,18 @@ Partial Class UserForm
         Me.LabelPassword.AutoSize = True
         Me.LabelPassword.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
         Me.LabelPassword.ForeColor = System.Drawing.Color.IndianRed
-        Me.LabelPassword.Location = New System.Drawing.Point(377, 184)
+        Me.LabelPassword.Location = New System.Drawing.Point(431, 245)
         Me.LabelPassword.Name = "LabelPassword"
-        Me.LabelPassword.Size = New System.Drawing.Size(252, 14)
+        Me.LabelPassword.Size = New System.Drawing.Size(315, 18)
         Me.LabelPassword.TabIndex = 16
         Me.LabelPassword.Text = "*Kosongkan password apabila tidak mengubah"
         Me.LabelPassword.Visible = False
         '
         'UserForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(634, 328)
+        Me.ClientSize = New System.Drawing.Size(725, 437)
         Me.Controls.Add(Me.LabelPassword)
         Me.Controls.Add(Me.CmbCustomer)
         Me.Controls.Add(Me.CmbHakAkses)
@@ -213,7 +206,6 @@ Partial Class UserForm
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "UserForm"
         Me.Text = "UserForm"
         Me.ResumeLayout(False)

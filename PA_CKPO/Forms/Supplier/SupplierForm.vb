@@ -1,6 +1,24 @@
 ﻿Public Class SupplierForm
 
     Private supplierId As String = Nothing
+
+    Public Function GetNextSupplierCode() As String
+        Dim query As String = "SELECT MAX(code) FROM suppliers"
+        Dim dt As DataTable = ExecuteQuery(query)
+
+        Dim latestCode As String = dt.Rows(0)(0).ToString()
+
+        If Not String.IsNullOrEmpty(latestCode) Then
+            Dim numericPart As String = latestCode.Substring(3) ' Extract the numeric part
+            Dim nextNumber As Integer = Integer.Parse(numericPart) + 1 ' Increment the numeric part
+            Dim nextCode As String = "SUP" & nextNumber.ToString("D3") ' Generate the next code with leading zeros
+
+            Return nextCode
+        Else
+            Return "SUP001"
+        End If
+    End Function
+
     Public Sub FormLoadEdit(rowId As String)
 
         LabelHeader.Text = "Ubah Data Pengguna"
@@ -42,6 +60,12 @@
             SupplierListForm.LoadData()
         Else
             MessageBox.Show("Mohon lengkapi isian anda!")
+        End If
+    End Sub
+
+    Private Sub UserForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        If IsNothing(supplierId) Then
+            TxtCode.Text = GetNextSupplierCode()
         End If
     End Sub
 End Class
