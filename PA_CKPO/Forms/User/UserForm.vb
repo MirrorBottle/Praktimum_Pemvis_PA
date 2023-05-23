@@ -20,28 +20,28 @@ Public Class UserForm
         CmbHakAkses.SelectedIndex = CInt(data("role")) - 1
         CmbCustomer.SelectedValue = If(data.IsNull("customer_id"), "", data("customer_id").ToString())
     End Sub
-    Private Sub UserForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+    Private Sub UserForm_Shown(sender As Object, e As EventArgs)
         If IsNothing(id) Then
             Me.FormLoad()
         End If
     End Sub
 
 
-    Private Sub UserForm_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
+    Private Sub UserForm_Closed(sender As Object, e As EventArgs)
         LabelHeader.Text = "Tambah Data Pengguna"
         Me.id = Nothing
         Helper.FormClear(Me)
     End Sub
 
-    Private Sub CmbHakAkses_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbHakAkses.SelectedIndexChanged
+    Private Sub CmbHakAkses_SelectedIndexChanged(sender As Object, e As EventArgs)
         CmbCustomer.Enabled = CmbHakAkses.SelectedItem = "Customer"
     End Sub
 
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs)
         Helper.FormClear(Me)
     End Sub
 
-    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs)
         Dim IsPass As Boolean = If(IsNothing(id), Helper.FormValidate(Me), Helper.FormValidate(Me, New List(Of String) From {"TxtPassword"}))
 
         If IsPass Then
@@ -72,4 +72,5 @@ Public Class UserForm
             MessageBox.Show("Mohon lengkapi isian anda!")
         End If
     End Sub
+
 End Class

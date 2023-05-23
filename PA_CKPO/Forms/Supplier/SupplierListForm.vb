@@ -35,7 +35,7 @@
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         Dim row As DataGridViewRow = DataGridView1.Rows(DataGridView1.CurrentRow.Index)
-        SupplierForm.FormLoadEdit(row.Cells(0).Value)
+        SupplierForm.SupplierFormLoadEdit(row.Cells(0).Value)
         SupplierForm.ShowDialog()
     End Sub
 

@@ -19,9 +19,9 @@
         End If
     End Function
 
-    Public Sub FormLoadEdit(rowId As String)
+    Public Sub SupplierFormLoadEdit(rowId As String)
 
-        LabelHeader.Text = "Ubah Data Pengguna"
+        LabelHeader.Text = "Ubah Data Supplier"
         Me.supplierId = rowId
 
         Dim data As DataRow = SqlHelper.FindRecordById("suppliers", supplierId)
@@ -31,6 +31,12 @@
         TxtConNumber.Text = data("contact_number")
         TxtAddress.Text = data("address")
 
+    End Sub
+
+    Private Sub SupplierForm_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
+        LabelHeader.Text = "Tambah Data Supplier"
+        Me.supplierId = Nothing
+        Helper.FormClear(Me)
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
@@ -63,7 +69,7 @@
         End If
     End Sub
 
-    Private Sub UserForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+    Private Sub SupplierForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         If IsNothing(supplierId) Then
             TxtCode.Text = GetNextSupplierCode()
         End If

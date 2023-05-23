@@ -64,6 +64,7 @@ Public Class NavbarControl
             Case 2 ' Logistic
                 MenuStrip1.Items.Add(New ToolStripMenuItem("Dashboard") With {.Name = "LogisticDashboard"})
                 MenuStrip1.Items.Add(New ToolStripMenuItem("Katalog") With {.Name = "LogisticItem"})
+                MenuStrip1.Items.Add(New ToolStripMenuItem("History PO") With {.Name = "LogisticPurchaseOrderHistory"})
 
             Case 3 ' Customer
                 MenuStrip1.Items.Add(New ToolStripMenuItem("Dashboard") With {.Name = "CustomerDashboard"})
@@ -88,14 +89,20 @@ Public Class NavbarControl
                 LogisticDashboardForm.Show()
                 LogisticDashboardForm.Activate()
             Case "LogisticItem"
-                ItemListForm.Show()
-                ItemListForm.Activate()
+                LogisticItemListForm.Show()
+                LogisticItemListForm.Activate()
+            Case "LogisticPurchaseOrderHistory"
+                LogisticPOListForm.Show()
+                LogisticPOListForm.Activate()
             Case "CustomerDashboard"
                 CustomerDashboardForm.Show()
                 CustomerDashboardForm.Activate()
             Case "CustomerItem"
-                ItemListForm.Show()
-                ItemListForm.Activate()
+                CustomerItemListForm.Show()
+                CustomerItemListForm.Activate()
+            Case "Profil"
+                Profil.Show()
+                Profil.Activate()
             Case "Logout"
                 Dim result As DialogResult = MessageBox.Show("Apa anda ingin logout?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then
