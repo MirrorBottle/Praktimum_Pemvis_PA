@@ -15,6 +15,16 @@
         Return Datatable
     End Function
 
+    Public Function SupplierList(Optional Keyword As String = Nothing) As DataTable
+        Dim Query As String = $"SELECT * FROM suppliers"
+        If Keyword IsNot Nothing Then
+            Query &= $" WHERE name LIKE '%{Keyword}%'"
+        End If
+        Query &= $" ORDER BY id DESC"
+        Dim Datatable As DataTable = SqlHelper.ExecuteQuery(Query)
+        Return Datatable
+    End Function
+
 
     Public Function PurchaseOrderAdminItemList(Optional Keyword As String = Nothing) As DataTable
         Dim Query As String = $"SELECT
